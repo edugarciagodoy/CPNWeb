@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { NavbarMainComponent } from './layouts/public/main-component/navbar-main/navbar-main.component';
+import { FooterMainComponent } from './layouts/public/main-component/footer-main/footer-main.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterModule, NavbarMainComponent, FooterMainComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'CPN';

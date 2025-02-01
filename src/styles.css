@@ -1,1 +1,495 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: "Jaldi", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+  
+.jaldi-bold {
+    font-family: "Jaldi", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-dark {
+    font-weight: 700;
+}
+
+.navbar-collapse {
+    justify-content: end;
+}
+
+.nav-link {
+    font-size: 1rem !important;
+}
+
+.btn-default {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.menu-consultar {
+    border: #D9D9D9 solid;
+}
+
+.menu-consultar a {
+    padding: 0 0.5rem 0 0.1rem !important;
+}
+
+.menu-consultar span {
+    font-size: 28px;
+    padding-left: 0.5rem;
+    color: #BF0909;
+}
+
+.container-titulo {
+    text-align: center;
+}
+
+.container-titulo h5 {
+    color: #BF0909;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.container-nvisitas {
+    background-color: #BF0909;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.nvisitas span {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.container-principal {
+    justify-items: center;
+    margin-top: 4rem;
+}
+
+.servicios-container {
+    justify-items: center;
+}
+
+.servicios-card {
+    border-radius: 30px !important;
+    border-color: #BF0909;
+    border-width: 5px;
+    width: 16rem;
+}
+
+.servicios-card-body {
+    text-align: center;
+}
+
+.servicios-card-title {
+    color: #004AAD;
+    font-weight: 700;
+}
+
+.servicios-img {
+    width: 7rem;
+}
+
+.servicios-card-text {
+    text-align: justify;
+    font-weight: 700;    
+}
+
+.container-buscar {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.btn-consultar {
+    background-color: #BF0909;
+    color: #ffffff;
+    border-color: #BF0909;
+    width: 37rem;
+    height: 10rem;
+    font-size: 2.5rem;
+    border-radius: 25% 25% 25% 25%;
+    /* margin-left: 5rem;
+    margin-right: 5rem; */
+}
+
+p {
+    text-align: justify;
+}
+
+.container-quees-img {
+    text-align: center;
+}
+
+.principal-titles{
+    color: #BF0909;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.container-quees-img img {
+    width: 22rem;
+}
+
+.ngrafico {
+    color: #3F8DF1;
+}
+
+.container-estructuracpn-img{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+}
+
+.container-estructuracpn-img img {
+    width: 25rem;
+}
+
+.container-qc-digito-cpn {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+/* 
+footer {
+    height: 5rem;
+    background-color: #3C4145;
+    color: #ffffff;
+}
+
+footer .col-6 {
+    width: 50%;
+    align-items: center;
+    padding: 0;
+}
+
+footer .col-6 p {
+    font-size: 0.7rem !important;
+    margin-bottom: 0px;
+} */
+footer {
+    background-color: #777;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: vh100;
+}
+
+footer .col-6 {
+    width: 50%;
+    align-items: center;
+    padding: 0;
+}
+
+footer div p {
+    font-size: 0.7rem !important;
+    margin-bottom: 0px;
+    margin-right: 1rem;
+}
+
+.container-dgraic {
+    position: absolute;
+    right: 0;
+}
+
+.container-login {
+    justify-content: center;
+}
+
+h4 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.reg-recov {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 0.7rem;
+}
+
+.reg-recov a {
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.a-solicitarusuario {
+    color: #3F8DF1;
+}
+
+.a-recuperarclave {
+    position: absolute;
+    right: 0;
+    color: #E91E22;
+    font-weight: 700;
+}
+
+.btn-correo,
+.btn-celular {
+    display: inline-flex;
+    text-align: start;
+    align-items: center;
+    background-color: #ffffff;
+    border-color: #D9D9D9;
+    border-radius: 0;
+}
+
+.btn-correo:hover,
+.btn-celular:hover {
+    border-color: #8F8F8F;
+}
+
+.lbl-seleccionar {
+    display: inline-flex;
+    text-align: start;
+}
+
+.txt-digitos {
+    border-style: none;
+    border-bottom: 2px dashed;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    width: 5rem;
+}
+
+.filtros-mantenimiento {
+    background-color: #F2F2F2;
+    border-radius: 30px;
+    height: 100%;
+    padding: 1rem !important;
+}
+
+.btn-parametro-busqueda {
+    border: solid #D9D9D9;
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.btn-parametro-busqueda-seleccionado {
+    background-color: #FFCCCC;
+}
+
+::placeholder {
+    color: #D9D9D9 !important;
+  }
+
+.btn-parametro-busqueda span {
+    font-size: 0.85rem;
+}
+
+.contenedor-txt-parametro-busqueda {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.container-btn-nuevo-mantenimiento {
+    text-align: end;
+}
+
+.btn-nuevo-mantenimiento {
+    background-color: #004AAD;
+    color: #FFFFFF;
+}
+
+.container-table-mantenimiento {
+    margin: 1rem !important;
+}
+
+.table-mantenimiento {
+    border-color: #004AAD;
+    text-align: center;
+}
+
+.table-mantenimiento thead th {
+    font-size: 1.2rem;
+}
+
+.table-mantenimiento tbody tr td {
+    font-size: 1rem;
+}
+
+.title-mantenimiento {
+    color: #004AAD;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+th {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.mantenimiento-modal-label {
+    font-size: 0.9rem;
+}
+
+.mantenimiento-modal-title {
+    padding-left: 1rem;
+    color: #38609C;
+    font-weight: 700;
+}
+
+.mantenimiento-modal-separador {
+    background: #38609C;
+    border: none;
+    height: 0.15rem !important;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.mantenimiento-modal-buttons {
+    text-align: center;
+}
+
+.btn-cancelar {
+    border: solid #D9D9D9;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.btn-guardar {
+    border: solid #38609C;
+    background-color: #38609C;
+    color: #ffffff;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.filtros-title {
+    text-align: start;
+}
+
+.container-btn-consultar {
+    display: flex;
+    justify-content: end;
+}
+
+.btn-consultar-default {
+    margin: 0.2rem;
+}
+
+.btn-consultas-multiples {
+    background-color: #38609C;
+    color: #FFFFFF;
+}
+
+.btn-exportar {
+    background-color: #4FB281;
+    color: #FFFFFF;
+}
+
+.container-btn-extra {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-como-consultar {
+    background-color: #BF0909;
+    color: #FFFFFF;
+}
+
+.btn-comentario {
+    background-color: #1251CE;
+    color: #FFFFFF;
+}
+
+.consultas-multiples-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.consultar-titulos {
+    margin: 0.5rem 0 0 0.5rem !important;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.container-archivo-plantilla {
+    margin: 0.1rem 2rem;
+    padding: 0.3rem 0.1rem;
+    border: solid #D9D9D9;
+    border-radius: 10px;
+    background-color: #F9FBFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono-archivo {
+    width: 15%;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #137F47;
+}
+
+.container-texto-archivo {
+    width: 60%;
+}
+
+.btn-consultas-multiples-descargar {
+    width: 25%;
+    font-size: 0.6rem;
+    border: solid #D9D9D9;
+    background-color: #FFFFFF;
+    margin: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container-texto-archivo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container-descripcion-archivo {
+    display: flex;
+    gap: 8px;
+}
+
+.tipo-de-archivo,
+.peso-de-archivo {
+  white-space: nowrap;
+}
+
+.texto-archivo {
+    font-size: 0.6rem;
+}
+
+.container-descripcion-archivo span {
+    color: #9D9C9C;
+    font-weight: 700;
+}
+
+.container-cargar-archivo {
+    margin: 0.1rem 2rem;
+    padding: 0.3rem 0.1rem;
+    border: solid #D9D9D9;
+    border-radius: 10px;
+    background-color: #F9FBFC;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-cargar-archivo {
+    
+}

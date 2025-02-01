@@ -1,0 +1,126 @@
+<div class="m-3">
+    <div class="row container-fluid">
+        <div class="col-2 filtros-mantenimiento p-2">
+            <h4 class="filtros-title">Filtros</h4>
+            <div class="filtros-mantenimiento-principales">
+                <div class="btn-parametro-busqueda">
+                    <span>Hospitales a nivel nacional</span>
+                </div>
+                <div class="btn-parametro-busqueda">
+                    <span>Estaciones de bomberos a nivel nacional</span>
+                </div>
+                <div class="btn-parametro-busqueda">
+                    <span>Aeropuertos</span>
+                </div>
+                <div class="btn-parametro-busqueda">
+                    <span>Código postal</span>
+                </div>
+                <div class="btn-parametro-busqueda btn-parametro-busqueda-seleccionado">
+                    <span>Distrito / Provincia / Departamento</span>
+                </div>
+                <div class="contenedor-txt-parametro-busqueda">
+                    <input type="text" name="" id="" class="form-control txt-parametro-busqueda">
+                </div>
+            </div>
+            <hr>
+            <div class="filtros-mantenimiento-secundarios">
+                <div class="btn-parametro-busqueda btn-parametro-busqueda-seleccionado">
+                    <span>Dirección</span>
+                </div>
+                <div class="btn-parametro-busqueda">
+                    <span>Centro poblado o localidad</span>
+                </div>
+                <div class="btn-parametro-busqueda">
+                    <span>Punto de interés</span>
+                </div>
+                <div class="contenedor-txt-parametro-busqueda">
+                    <input type="text" name="" id="" placeholder="Dirección"
+                        class="form-control txt-parametro-busqueda">
+                </div>
+                <div class="contenedor-txt-parametro-busqueda">
+                    <input type="text" name="" id="" placeholder="Nro"
+                        class="form-control txt-parametro-busqueda">
+                </div>
+            </div>
+        </div>
+        <div class="col m-3">
+            <div class="row container-fluid">
+                <div class="col container-btn-consultar">
+                    <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                        <span class="material-symbols-outlined">map_search</span>
+                        Consultas múltiples
+                    </button>
+                    <button type="button" class="btn btn-default btn-consultar-default btn-exportar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <span class="material-symbols-outlined">download</span>
+                        Exportar
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8071490.353518892!2d-74.15946888169212!3d-8.957640346698458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1737997927035!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="row mt-3">
+                <div class="container-btn-extra">
+                    <button type="button" class="btn btn-default btn-consultar-default btn-como-consultar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <span class="material-symbols-outlined">help</span>
+                        ¿Cómo buscar?
+                    </button>
+                    <button type="button" class="btn btn-default btn-consultar-default btn-comentario" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <span class="material-symbols-outlined">forum</span>
+                        Comentario
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-consultas-multiples" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="modal-consultas-multiples-Label" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-body container-fluid">
+            <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-consultas-multiples-Label">Consultas múltiples</h1>
+            <hr class="mantenimiento-modal-separador">
+            <div class="consultas-multiples-btn">
+                <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                    <span class="material-symbols-outlined">home_pin</span>
+                    Dirección
+                </button>
+                <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                    <span class="material-symbols-outlined">pin_drop</span>
+                    Coordenadas
+                </button>
+            </div>
+            <div class="mt-2">
+                <span class="consultar-titulos">Archivo plantilla para descargar</span>
+                <div class="container-archivo-plantilla">
+                    <span class="material-symbols-outlined icono-archivo">description</span>
+                    <div class="container-texto-archivo">
+                        <span class="nombre-de-archivo texto-archivo">Nombre_de_archivo</span>
+                        <div class="container-descripcion-archivo">
+                            <span class="tipo-de-archivo texto-archivo descripcion-archivo">XLXS</span>
+                            <span class="separador texto-archivo">
+                                ·
+                            </span>
+                            <span class="peso-de-archivo texto-archivo descripcion-archivo">4.49 KB</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-default btn-consultas-multiples-descargar" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                        <span class="material-symbols-outlined">cloud_download</span>
+                        Descargar
+                    </button>
+                </div>
+            </div>
+            <div class="mt-2">
+                <span class="consultar-titulos">Cargar archivo</span>
+                <div class="container-cargar-archivo">
+                    <span class="material-symbols-outlined icono-archivo">description</span>
+                    <span class="nombre-de-archivo texto-archivo">Arrastre y suelte el archivo aquí o</span>
+                    <button type="button" class="btn btn-default btn-consultas-multiples-descargar">Escoger archivo</button>
+                    <input type="file" name="" id="" hidden>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
