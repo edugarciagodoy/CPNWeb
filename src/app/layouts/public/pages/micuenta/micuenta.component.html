@@ -1,32 +1,105 @@
-<h4>Mi cuenta</h4>
-<div class="container-fluid">
-    <div class="card">
-        <span>Datos del usuario</span>
-        <button>Editar</button>
-        <form action="">
-            <label for="">Documento de identidad</label>
-            <input type="text">
-            <label for="">Nro. de documento de identidad</label>
-            <input type="text">
-            <label for="">Apellido paterno*</label>
-            <input type="text">
-            <label for="">Apellido materno</label>
-            <input type="text">
-            <label for="">Nombre(s)</label>
-            <input type="text">
-            <label for="">Nro. celular</label>
-            <input type="text">
-            <label for="">Nro</label>
-            <input type="text">
-            <label for="">Nro</label>
-            <input type="text">
-            <label for="">Nro</label>
-            <input type="text">
-            <label for="">Nro</label>
-            <input type="text">
+<div class="container-micuenta-titulo">
+    <span class="micuenta-titulo">Mi cuenta</span>
+</div>
+<div class="container-fluid container-micuenta row">
+    <div class="col col-6 card-micuenta">
+        <div class="card-section-titulo">
+            <span class="card-titulo">
+                <span class="material-symbols-outlined">person</span>
+                <span class="card-titulo-texto">Datos del usuario</span>
+            </span>
+            <button class="btn-editar">
+                <span class="material-symbols-outlined">border_color</span>
+                Editar
+            </button>
+        </div>
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="mcUsuarioTipoDeDocumentoDeIdentidad" class="form-label">Documento de identidad</label>
+              <input type="text" class="form-control" id="mcTipoDeDocumentoDeIdentidad">
+            </div>
+            <div class="col-md-6">
+              <label for="mcUsuarioNroDeDocumentoDeIdentidad" class="form-label">Nro. de documento de identidad</label>
+              <input type="text" class="form-control" id="mcUsuarioNroDeDocumentoDeIdentidad">
+            </div>
+            <div class="col-6">
+              <label for="mcUsuarioApellidoPaterno" class="form-label">Apellido paterno</label>
+              <input type="text" class="form-control" id="mcUsuarioApellidoPaterno">
+            </div>
+            <div class="col-6">
+              <label for="mcUsuarioApellidoMaterno" class="form-label">Apellido materno</label>
+              <input type="text" class="form-control" id="mcUsuarioApellidoMaterno">
+            </div>
+            <div class="col-md-9">
+              <label for="mcUsuarioNombre" class="form-label">Nombre(s)</label>
+              <input type="text" class="form-control" id="mcUsuarioNombre">
+            </div>
+            <div class="col-md-3">
+              <label for="mcUsuarioNroCelular" class="form-label">Nro. celular*</label>
+              <input type="text" class="form-control" id="mcUsuarioNroCelular">
+            </div>
+            <div class="col-md-4">
+              <label for="mcUsuarioDepartamento" class="form-label">Departamento*</label>
+              <input type="text" class="form-control" id="mcUsuarioDepartamento">
+            </div>
+            <div class="col-md-4">
+              <label for="mcUsuarioProvincia" class="form-label">Provincia*</label>
+              <input type="text" class="form-control" id="mcUsuarioProvincia">
+            </div>
+            <div class="col-md-4">
+              <label for="mcUsuarioDistrito" class="form-label">Distrito*</label>
+              <input type="text" class="form-control" id="mcUsuarioDistrito">
+            </div>
+            <div class="col-12">
+                <label for="mcUsuarioDireccion" class="form-label">Dirección*</label>
+                <input type="text" class="form-control" id="mcUsuarioDireccion">
+            </div>
         </form>
     </div>
-    <div class="card">
-        <span>Datos del centro de labores</span>
+    <div class="col col-6 card-micuenta">
+        <div class="card-section-titulo">
+            <span class="card-titulo">
+                <span class="material-symbols-outlined">work</span>
+                <span class="card-titulo-texto">Datos del centro de labores</span>
+            </span>
+            <button class="btn-editar">
+                <span class="material-symbols-outlined">border_color</span>
+                Editar
+            </button>
+        </div>
+        <form class="row g-3">
+            <div class="col-md-12">
+              <label for="mcTrabajadorNroDeDocumentoDeIdentidad" class="form-label">Nro. de RUC</label>
+              <input type="text" class="form-control" id="mcTrabajadorNroDeDocumentoDeIdentidad">
+            </div>
+            <div class="col-md-12">
+              <label for="mcTrabajadorRazonSocial" class="form-label">Razón social</label>
+              <input type="text" class="form-control" id="mcTrabajadorRazonSocial">
+            </div>
+            <div class="col-md-9">
+              <label for="mcUsuarioNombre" class="form-label">Nombre(s)</label>
+              <input type="text" class="form-control" id="mcTrabajadorNombre">
+            </div>
+            <div class="col-md-3">
+              <label for="mcUsuarioNroCelular" class="form-label">Nro. celular*</label>
+              <input type="text" class="form-control" id="mcTrabajadorNroCelular">
+            </div>
+            <div class="col-md-4">
+              <label for="mcUsuarioDepartamento" class="form-label">Departamento*</label>
+              <input type="text" class="form-control" id="mcUsuarioDepartamento">
+            </div>
+            <div class="col-md-4">
+              <label for="mcUsuarioProvincia" class="form-label">Provincia*</label>
+              <input type="text" class="form-control" id="mcUsuarioProvincia">
+            </div>
+            <div class="col-md-4">
+              <label for="mcUsuarioDistrito" class="form-label">Distrito*</label>
+              <input type="text" class="form-control" id="mcUsuarioDistrito">
+            </div>
+            <div class="col-12">
+                <label for="mcUsuarioDireccion" class="form-label">Dirección*</label>
+                <input type="text" class="form-control" id="mcUsuarioDireccion">
+            </div>
+        </form>
     </div>
 </div>

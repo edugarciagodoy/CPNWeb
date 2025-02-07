@@ -1,0 +1,66 @@
+.container-micuenta {
+    padding-right: 2rem;
+    padding-left: 4rem;
+    justify-content: space-between;
+}
+
+.container-micuenta-titulo {
+    margin: 1rem;
+    padding-left: 1rem;
+}
+
+.micuenta-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #004AAD;
+}
+
+.card-micuenta {
+    /* margin-right: 0.5rem;
+    margin-left: 0.5rem; */
+    /* border: #000000 solid; */
+    width: 49%;
+    border-radius: 10px;
+    padding: 0.8rem;
+    background-color: #EBF0FE;
+}
+
+.card-section-titulo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.card-titulo span {
+    font-size: 1.3rem;
+
+}
+
+.card-titulo-texto {
+    color: #004AAD;
+    font-weight: 700;
+    margin-left: 0.6rem;
+}
+
+.card-titulo,
+.btn-editar {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-editar,
+.btn-editar span {
+    font-size: 0.9rem;
+}
+
+.btn-editar {
+    border: #D9D9D9 solid;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    color: #747474;
+    padding: 0.2rem;
+}
+
+.btn-editar span {
+    margin-right: 0.5rem;
+}
