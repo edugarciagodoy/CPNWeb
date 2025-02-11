@@ -1,1 +1,203 @@
-<p>gestiondeusuarios works!</p>
+<div class="m-3">
+    <div class="row container-fluid">
+        <div class="col-2 filtros-mantenimiento p-2">
+            <h4 class="filtros-title">Filtros</h4>
+            <div class="filtros-mantenimiento-principales">
+                <span class="filtro-subtitulo">Por empresa</span>
+                <div class="btn-parametro-busqueda">
+                    <span>DHL</span>
+                </div>
+                <div class="btn-parametro-busqueda">
+                    <span>Shalom</span>
+                </div>
+                <div class="btn-parametro-busqueda">
+                    <span>Olva</span>
+                </div>
+                <div class="btn-parametro-busqueda">
+                    <span>Serpost</span>
+                </div>
+                <span class="filtro-subtitulo">Por estado</span>
+                <div class="btn-parametro-busqueda">
+                    <span>Pendiente</span>
+                </div>
+                <div class="btn-parametro-busqueda">
+                    <span>Rechazado</span>
+                </div>
+                <div class="btn-parametro-busqueda">
+                    <span>Aprobado</span>
+                </div>
+            </div>
+        </div>
+        <div class="col m-3">
+            <div class="row container-fluid">
+                <span class="titulo">Solicitudes de creación de usuarios</span>
+            </div>
+            <div class="row mt-3">
+                <table class="table">
+                    <thead>
+                        <th>Nombre(s)</th>
+                        <th>Apellidos</th>
+                        <th>Empresa</th>
+                        <th>Documento de identidad</th>
+                        <th>Estado</th>
+                        <th>Calificar</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Carla</td>
+                            <td>Mirabal</td>
+                            <td>DHL</td>
+                            <td>87654321</td>
+                            <td class="td-solicitud-estado">
+                                <div class="solicitud-estado solicitud-estado-pendiente">
+                                    <span>Pendiente</span>
+                                </div>
+                            </td>
+                            <td class="td-btn-calificar">
+                                <div class="btn-calificar" data-bs-toggle="modal" data-bs-target="#modal-calificar-vigencia">
+                                    <span class="material-symbols-outlined">search</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nathaly</td>
+                            <td>Mirabal</td>
+                            <td>DHL</td>
+                            <td>87654321</td>
+                            <td class="td-solicitud-estado">
+                                <div class="solicitud-estado solicitud-estado-pendiente">
+                                    <span>Pendiente</span>
+                                </div>
+                            </td>
+                            <td class="td-btn-calificar">
+                                <div class="btn-calificar" data-bs-toggle="modal" data-bs-target="#modal-calificar-solicitud">
+                                    <span class="material-symbols-outlined">search</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Carla</td>
+                            <td>Cucci</td>
+                            <td>Shalom</td>
+                            <td>87654321</td>
+                            <td class="td-solicitud-estado">
+                                <div class="solicitud-estado solicitud-estado-aprobado">
+                                    <span>Aprobado</span>
+                                </div>
+                            </td>
+                            <td class="td-btn-calificar">
+                                <div class="btn-calificar" data-bs-toggle="modal" data-bs-target="#modal-calificar-solicitud">
+                                    <span class="material-symbols-outlined">search</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Eduardo</td>
+                            <td>García Godoy</td>
+                            <td>Shalom</td>
+                            <td>45678912</td>
+                            <td class="td-solicitud-estado">
+                                <div class="solicitud-estado solicitud-estado-pendiente">
+                                    <span>Pendiente</span>
+                                </div>
+                            </td>
+                            <td class="td-btn-calificar">
+                                <div class="btn-calificar" data-bs-toggle="modal" data-bs-target="#modal-calificar-solicitud">
+                                    <span class="material-symbols-outlined">search</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Carla</td>
+                            <td>Quispe</td>
+                            <td>DHL</td>
+                            <td>87654321</td>
+                            <td class="td-solicitud-estado">
+                                <div class="solicitud-estado solicitud-estado-rechazado">
+                                    <span>Rechazado</span>
+                                </div>
+                            </td>
+                            <td class="td-btn-calificar">
+                                <div class="btn-calificar" data-bs-toggle="modal" data-bs-target="#modal-calificar-solicitud">
+                                    <span class="material-symbols-outlined">search</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-calificar-solicitud" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-calificar-solicitud-Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body container-fluid">
+                <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-calificar-solicitud-Label">Calificación de solicitud</h1>
+                <hr class="mantenimiento-modal-separador">
+                <div class="container-datos-personales">
+                    <span class="subtitulo">Datos del usuario</span>
+                    <div class="container-persona">
+                        <span class="material-symbols-outlined">person</span>
+                        <span class="nombre-persona">Eduardo García Godoy</span>
+                        <span>·</span>
+                        <span class="documento-de-identidad">45678912</span>
+                    </div>
+                    <div class="container-nro-celular">
+                        <span class="material-symbols-outlined">smartphone</span>
+                        <span class="nro-celular">985746321</span>
+                    </div>
+                    <div class="container-direccion">
+                        <span class="material-symbols-outlined">home</span>
+                        <div class="container-direccion-texto">
+                            <span>Lima / Lima / Lima</span>
+                            <span>Jr. Zorritos N° 1203</span>
+                        </div>
+                    </div>
+                    <span class="subtitulo">Datos del centro de labores</span>
+                    <div class="container-trabajo">
+                        <span class="material-symbols-outlined">work</span>
+                        <span class="nombre-trabajo">Shalom</span>
+                        <span>·</span>
+                        <span class="documento-de-identidad">45612378912345</span>
+                    </div>
+                    <div class="container-nro-celular-correo">
+                        <span class="material-symbols-outlined">smartphone</span>
+                        <span class="nro-celular">985746321</span>
+                        <span class="material-symbols-outlined">mail</span>
+                        <span class="nro-celular">egarcia&#64;shalom.com</span>
+                    </div>
+                    <div class="container-direccion">
+                        <span class="material-symbols-outlined">home</span>
+                        <div class="container-direccion-texto">
+                            <span>Lima / Lima / Lima</span>
+                            <span>Av. Venezuela 1670</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-calificar-vigencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-calificar-vigencia-Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body container-fluid">
+                <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-calificar-vigencia-Label">Calificación de solicitud</h1>
+                <hr class="mantenimiento-modal-separador">
+                <div class="container-vigencia">
+                    <span class="subtitulo-vigencia">Determinar vigencia</span>
+                    <p>
+                        Para finalizar es necesario determinar el tiempo de vigencia que tendrá el acceso seleccionando la fecha de inicio y la fecha final.
+                    </p>
+                    <div class="calendario-inicio">
+
+                    </div>
+                    <div class="calendario-fin">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

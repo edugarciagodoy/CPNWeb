@@ -1,0 +1,80 @@
+.table {
+    text-align: center;
+}
+
+.td-solicitud-estado {
+    justify-items: center;
+}
+
+.solicitud-estado {
+    border-radius: 10px;
+    color: #FFFFFF;
+    width: 60%;
+}
+
+.solicitud-estado-pendiente {
+    background-color: #FBE83A;
+}
+
+.solicitud-estado-rechazado {
+    background-color: #FE3839;
+}
+
+.solicitud-estado-aprobado {
+    background-color: #57F000;
+}
+
+.td-btn-calificar {
+    justify-items: center;
+}
+
+.btn-calificar {
+    cursor: pointer;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-datos-personales {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.subtitulo,
+.subtitulo-vigencia {
+    color: #38609C;
+    font-weight: 700;
+}
+
+.container-persona,
+.container-nro-celular,
+.container-direccion,
+.container-trabajo,
+.container-nro-celular-correo {
+    display: flex;
+    align-items: center;
+}
+
+.container-persona span,
+.container-nro-celular span,
+.container-direccion span,
+.container-trabajo span,
+.container-nro-celular-correo span {
+    font-size: 1rem;
+}
+
+.container-persona {
+    justify-content: space-between;
+}
+
+.container-direccion-texto {
+    display: grid;
+}
+
+.container-vigencia {
+    text-align: center;
+}
+
+.subtitulo-vigencia {
+    text-align: center;
+}

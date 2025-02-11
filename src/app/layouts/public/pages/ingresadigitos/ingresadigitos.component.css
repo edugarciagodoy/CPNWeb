@@ -1,0 +1,24 @@
+.container-modo-de-recuperacion {
+    display: block;
+    justify-items: center;
+}
+
+.digitos {
+    width: 15rem;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.digito-texto {
+    width: 2.5rem;
+    margin: 0;
+    border: 0;
+    border-bottom: solid;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.digito-texto:focus {
+    outline: none;
+}

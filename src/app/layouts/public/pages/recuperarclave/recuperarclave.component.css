@@ -1,0 +1,20 @@
+.container-modo-de-recuperacion {
+    display: block;
+    justify-items: center;
+}
+
+.btn-modo-de-recuperacion {
+    width: 15rem;
+    margin: 0 !important;
+    border: solid #D9D9D9;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.btn-modo-de-recuperacion span {
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}

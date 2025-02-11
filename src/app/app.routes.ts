@@ -10,9 +10,12 @@ import { SolicitarusuarioComponent } from './layouts/public/pages/solicitarusuar
 import { MicuentaComponent } from './layouts/public/pages/micuenta/micuenta.component';
 import { GestiondeusuariosComponent } from './layouts/public/pages/gestiondeusuarios/gestiondeusuarios.component';
 import { SalirComponent } from './layouts/public/pages/salir/salir.component';
+import { RecuperarclaveComponent } from './layouts/public/pages/recuperarclave/recuperarclave.component';
+import { IngresadigitosComponent } from './layouts/public/pages/ingresadigitos/ingresadigitos.component';
+import { NuevaclaveComponent } from './layouts/public/pages/nuevaclave/nuevaclave.component';
 
 export const routes: Routes = [
-    // { path: '**', redirectTo: '', pathMatch: 'full' }, // Redirección si la ruta no existe
+    // { path: '**', redirectTo: 'home', pathMatch: 'full' }, // Redirección si la ruta no existe
     { path: 'home', component: HomeComponent }, // Página principal
     { path: 'comobuscar', component: ComobuscarComponent },
     { path: 'consultar', component: ConsultarComponent },
@@ -23,5 +26,8 @@ export const routes: Routes = [
     { path: 'solicitarusuario', component: SolicitarusuarioComponent },
     { path: 'micuenta', component: MicuentaComponent },
     { path: 'gestiondeusuarios', component: GestiondeusuariosComponent },
-    { path: 'salir', component: SalirComponent }
+    { path: 'salir', component: SalirComponent },
+    { path: 'recuperarclave', component: RecuperarclaveComponent },
+    { path: 'ingresadigitos', component: IngresadigitosComponent },
+    { path: 'nuevaclave', component: NuevaclaveComponent }
 ];
