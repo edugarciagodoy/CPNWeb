@@ -78,3 +78,21 @@
 .subtitulo-vigencia {
     text-align: center;
 }
+
+.calendarios-vigencia {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-fechas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.fecha-vigencia {
+    background-color: #f4f8f9;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+}

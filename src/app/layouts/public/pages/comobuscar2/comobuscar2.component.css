@@ -1,0 +1,31 @@
+.container-tarjeta-correspondencia {
+    background-color: #455174;
+    color: #FFFFFF;
+    padding: 0.7rem;
+    border-radius: 15px;
+}
+
+.tarjeta-correspondencia ul li {
+    font-size: 1rem;
+    
+}
+
+.accordion-button {
+    background-color: #EBF0FE !important;
+    /* border: 0; */
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    /* border: 0; */
+}
+
+.accordion-body {
+    font-size: 0.9rem;
+    /* border: 0; */
+}
+
+.accordion-item {
+    margin: 0.5rem;
+    border: 0;
+}

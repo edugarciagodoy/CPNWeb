@@ -11,4 +11,5 @@ import { FooterMainComponent } from './layouts/public/main-component/footer-main
 })
 export class AppComponent {
   title = 'CPN';
+  
 }

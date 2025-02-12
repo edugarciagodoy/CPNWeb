@@ -13,11 +13,13 @@ import { SalirComponent } from './layouts/public/pages/salir/salir.component';
 import { RecuperarclaveComponent } from './layouts/public/pages/recuperarclave/recuperarclave.component';
 import { IngresadigitosComponent } from './layouts/public/pages/ingresadigitos/ingresadigitos.component';
 import { NuevaclaveComponent } from './layouts/public/pages/nuevaclave/nuevaclave.component';
+import { Comobuscar2Component } from './layouts/public/pages/comobuscar2/comobuscar2.component';
 
 export const routes: Routes = [
     // { path: '**', redirectTo: 'home', pathMatch: 'full' }, // Redirección si la ruta no existe
     { path: 'home', component: HomeComponent }, // Página principal
     { path: 'comobuscar', component: ComobuscarComponent },
+    { path: 'comobuscar2', component: Comobuscar2Component }, //TEMPORAL
     { path: 'consultar', component: ConsultarComponent },
     { path: 'contactenos', component: ContactenosComponent },
     { path: 'definicion', component: DefinicionComponent },
