@@ -3,10 +3,14 @@
         <form action="" method="get">
             <h4>Recuperar cuenta</h4>
             <label for="">Nueva contraseña</label>
-            <input type="password" class="w-100" name="" id="">
+            <input type="password" class="form-control w-100" name="" id="nc-pass-01">
             <label for="">Repetir nueva contraseña</label>
-            <input type="password" class="w-100" name="" id="">
-            <button type="button" class="btn btn-danger mt-2 w-100">GUARDAR</button>
+            <!-- <input type="password" class="w-100" name="" id="nc-pass-02"> -->
+            <input type="password" class="form-control w-100" id="nc-pass-02" aria-describedby="nc-pass-02Feedback" (keyup)="onKeyUp($event)" required>
+            <div id="nc-pass-02Feedback" class="invalid-feedback">
+                Las contraseñas no coinciden.
+            </div>
+            <button type="button" class="btn btn-danger mt-2 w-100" onclick="guardarNuevaClave()">GUARDAR</button>
         </form>
     </div>
 </div>

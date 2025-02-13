@@ -329,7 +329,16 @@ th {
     padding-right: 1.5rem;
 }
 
-.btn-guardar {
+.btn-rechazar {
+    border: solid #FE3839;
+    background-color: #FE3839;
+    color: #FFFFFF;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.btn-guardar,
+.btn-finalizar {
     border: solid #38609C;
     background-color: #38609C;
     color: #ffffff;

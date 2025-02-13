@@ -75,13 +75,28 @@
     text-align: center;
 }
 
+.container-vigencia p,
+.container-solicitud-rechazada p,
+.container-solicitud-rechazada p span,
+.container-solicitud-aprobada p,
+.container-solicitud-aprobada p span {
+    font-size: 1rem;
+}
+
 .subtitulo-vigencia {
     text-align: center;
 }
 
-.calendarios-vigencia {
-    display: flex;
-    justify-content: space-evenly;
+.calendario-vigencia {
+    justify-items: center;
+}
+
+mat-card {
+    width: 15rem;
+}
+
+mat-card span{
+    font-size: 0.1rem !important;
 }
 
 .container-fechas {
@@ -95,4 +110,13 @@
     background-color: #f4f8f9;
     padding: 0.2rem 0.5rem;
     border-radius: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal-buttons .btn {
+    padding: 0.3rem 0.7rem;
 }

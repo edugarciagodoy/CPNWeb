@@ -8,9 +8,11 @@
     margin: 0 !important;
     border: solid #D9D9D9;
     background-color: #FFFFFF;
+    color: #000000;
     display: flex;
     align-items: center;
     font-size: 1rem;
+    text-decoration: none;
 }
 
 .btn-modo-de-recuperacion span {

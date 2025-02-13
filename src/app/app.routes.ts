@@ -14,6 +14,7 @@ import { RecuperarclaveComponent } from './layouts/public/pages/recuperarclave/r
 import { IngresadigitosComponent } from './layouts/public/pages/ingresadigitos/ingresadigitos.component';
 import { NuevaclaveComponent } from './layouts/public/pages/nuevaclave/nuevaclave.component';
 import { Comobuscar2Component } from './layouts/public/pages/comobuscar2/comobuscar2.component';
+import { CuentarecuperadaComponent } from './layouts/public/pages/cuentarecuperada/cuentarecuperada.component';
 
 export const routes: Routes = [
     // { path: '**', redirectTo: 'home', pathMatch: 'full' }, // Redirección si la ruta no existe
@@ -31,5 +32,6 @@ export const routes: Routes = [
     { path: 'salir', component: SalirComponent },
     { path: 'recuperarclave', component: RecuperarclaveComponent },
     { path: 'ingresadigitos', component: IngresadigitosComponent },
-    { path: 'nuevaclave', component: NuevaclaveComponent }
+    { path: 'nuevaclave', component: NuevaclaveComponent },
+    { path: 'cuentarecuperada', component: CuentarecuperadaComponent }
 ];

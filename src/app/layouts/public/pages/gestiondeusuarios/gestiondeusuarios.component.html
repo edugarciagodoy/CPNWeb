@@ -54,7 +54,7 @@
                                 </div>
                             </td>
                             <td class="td-btn-calificar">
-                                <div class="btn-calificar" data-bs-toggle="modal" data-bs-target="#modal-calificar-vigencia">
+                                <div class="btn-calificar" data-bs-toggle="modal" data-bs-target="#modal-calificar-solicitud">
                                     <span class="material-symbols-outlined">search</span>
                                 </div>
                             </td>
@@ -128,9 +128,6 @@
             </div>
         </div>
     </div>
-    <div style="width: 50rem; font-size: 1rem;">
-        <input type="date" name="" id="">
-    </div>
 </div>
 <div class="modal fade" id="modal-calificar-solicitud" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-calificar-solicitud-Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -177,6 +174,11 @@
                             <span>Av. Venezuela 1670</span>
                         </div>
                     </div>
+                    <div class="modal-buttons mt-3">
+                        <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-rechazar" data-bs-toggle="modal" data-bs-target="#modal-solicitud-rechazada">Rechazar</button>
+                        <button type="button" class="btn btn-guardar" data-bs-toggle="modal" data-bs-target="#modal-calificar-vigencia">Aprobar</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,27 +195,63 @@
                     <p>
                         Para finalizar es necesario determinar el tiempo de vigencia que tendrá el acceso seleccionando la fecha de inicio y la fecha final.
                     </p>
-                    <div class="calendarios-vigencia">
-                        <div class="calendario-vigencia calendario-vigencia-inicio">
-                            <!-- <input type="date" name="" id=""> -->
-                            <!-- <mat-card class="demo-inline-calendar-card">
-                                <mat-calendar (selectedChange)="_onSelectedChange($event)"
-                                [selected]="selectedDateRange"></mat-calendar>
-                            </mat-card>
-                            <p>Selected range date: {{selected()}}</p> -->
-                        </div>
-                        <div class="calendario-vigencia calendario-vigencia-fin">
-                            <input type="date" name="" id="">
-                        </div>
+                    <div class="calendario-vigencia">
+                        <mat-card class="demo-inline-calendar-card">
+                            <mat-calendar (selectedChange)="_onSelectedChange($event)"
+                            [selected]="selectedDateRange"></mat-calendar>
+                        </mat-card>
+                        <!-- <p>Selected range date: {{ selectedDateRange?.start | date: 'dd/MM/yyyy'}} - {{ selectedDateRange?.end | date: 'dd/MM/yyyy' }}</p> -->
                     </div>
                     <div class="container-fechas">
                         <div class="fecha-vigencia fecha-incial">
-                            <span>17/06/2022</span>
+                            <span>{{ selectedDateRange?.start | date: 'dd/MM/yyyy'}}</span>
                         </div>
                         <span class="material-symbols-outlined">arrow_right_alt</span>
                         <div class="fecha-vigencia fecha-final">
-                            <span>12/07/2022</span>
+                            <span>{{ selectedDateRange?.end | date: 'dd/MM/yyyy' }}</span>
                         </div>
+                    </div>
+                    <div class="modal-buttons mt-3">
+                        <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-guardar" data-bs-toggle="modal" data-bs-target="#modal-solicitud-aprobada">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-solicitud-rechazada" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-solicitud-rechazada-Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body container-fluid">
+                <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-solicitud-rechazada-Label">Calificación de solicitud</h1>
+                <hr class="mantenimiento-modal-separador">
+                <div class="container-solicitud-rechazada">
+                    <span class="subtitulo-vigencia">¡Solicitud rechazada!</span>
+                    <p>
+                        La solicitud ha sido rechazada. El usuario <span class="text-dark">Eduardo García Godoy</span> quien labora en la empresa <span class="text-dark">Shalom</span> no tendrá acceso al sistema. El solicitante será debidamente notificado via correo electrónico.
+                    </p>
+                    <div class="modal-buttons mt-3">
+                        <button type="button" class="btn btn-finalizar" data-bs-dismiss="modal">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-solicitud-aprobada" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-solicitud-aprobada-Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body container-fluid">
+                <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-solicitud-aprobada-Label">Calificación de solicitud</h1>
+                <hr class="mantenimiento-modal-separador">
+                <div class="container-solicitud-aprobada">
+                    <span class="subtitulo-vigencia">¡Solicitud aprobada!</span>
+                    <p>
+                        La solicitud ha sido aprobada con éxito. El usuario <span class="text-dark">Eduardo García Godoy</span> quien labora en la empresa <span class="text-dark">Shalom</span> tendrá acceso al sistema desde el <span class="text-dark">{{ selectedDateRange?.start | date: 'dd/MM/yyyy'}}</span> hasta el <span class="text-dark">{{ selectedDateRange?.end | date: 'dd/MM/yyyy' }}</span>. El solicitante será debidamente notificado via correo electrónico.
+                    </p>
+                    <div class="modal-buttons mt-3">
+                        <button type="button" class="btn btn-finalizar" data-bs-dismiss="modal">Finalizar</button>
                     </div>
                 </div>
             </div>
