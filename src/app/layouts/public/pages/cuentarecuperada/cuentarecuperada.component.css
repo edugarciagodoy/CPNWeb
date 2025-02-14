@@ -1,0 +1,10 @@
+.container-principal {
+    text-align: center;
+}
+
+.container-mensaje {
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+    width: 23rem;
+}

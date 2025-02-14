@@ -3,23 +3,25 @@
         <div class="col-2 filtros-mantenimiento p-2">
             <h4 class="filtros-title">Filtros</h4>
             <div class="filtros-mantenimiento-principales">
-                <div class="btn-parametro-busqueda">
-                    <span>Hospitales a nivel nacional</span>
+                <div id="container-puntosdeinteres">
+                    <!-- <div class="btn-parametro-busqueda" id="btn-parametro-busqueda-01" (click)="filtroSeleccion($event)">
+                        <span>Hospitales a nivel nacional</span>
+                    </div>
+                    <div class="btn-parametro-busqueda" id="btn-parametro-busqueda-02" (click)="filtroSeleccion($event)">
+                        <span>Estaciones de bomberos a nivel nacional</span>
+                    </div>
+                    <div class="btn-parametro-busqueda" id="btn-parametro-busqueda-03" (click)="filtroSeleccion($event)">
+                        <span>Aeropuertos</span>
+                    </div> -->
                 </div>
-                <div class="btn-parametro-busqueda">
-                    <span>Estaciones de bomberos a nivel nacional</span>
-                </div>
-                <div class="btn-parametro-busqueda">
-                    <span>Aeropuertos</span>
-                </div>
-                <div class="btn-parametro-busqueda">
+                <div class="btn-parametro-busqueda" id="btn-parametro-codigo-postal" (click)="filtroSeleccion($event)">
                     <span>Código postal</span>
                 </div>
-                <div class="btn-parametro-busqueda btn-parametro-busqueda-seleccionado">
+                <div class="btn-parametro-busqueda" id="btn-parametro-distrito-provincia-departamento" (click)="filtroSeleccion($event)">
                     <span>Distrito / Provincia / Departamento</span>
                 </div>
-                <div class="contenedor-txt-parametro-busqueda">
-                    <input type="text" name="" id="" class="form-control txt-parametro-busqueda">
+                <div class="contenedor-txt-parametro-busqueda" hidden>
+                    <input type="text" name="" id="txt-distrito-provincia-departamento" class="form-control txt-parametro-busqueda">
                 </div>
             </div>
             <hr>
