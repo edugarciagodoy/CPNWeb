@@ -234,17 +234,30 @@ h4 {
 
 .filtros-mantenimiento {
     background-color: #F2F2F2;
-    border-radius: 30px;
+    border-radius: 20px;
     height: 100%;
-    padding: 1rem !important;
+    /* margin: 1rem; */
+    /* padding: 1rem !important; */
+}
+
+.filtros-title {
+    text-align: start;
+    padding: 1rem 0 0 1rem;
 }
 
 .btn-parametro-busqueda {
     border: solid #D9D9D9;
-    border-radius: 10px;
-    margin: 0.5rem;
-    padding: 0.2rem;
+    border-radius: 20px;
+    margin: 0.3rem 0.1rem;
+    padding: 0.35rem 0.4rem;
     cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    
 }
 
 .btn-parametro-busqueda-seleccionado {
@@ -256,7 +269,7 @@ h4 {
   }
 
 .btn-parametro-busqueda span {
-    font-size: 0.85rem;
+    font-size: 0.65rem;
 }
 
 .contenedor-txt-parametro-busqueda {
@@ -344,10 +357,6 @@ th {
     color: #ffffff;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-}
-
-.filtros-title {
-    text-align: start;
 }
 
 .container-btn-consultar {

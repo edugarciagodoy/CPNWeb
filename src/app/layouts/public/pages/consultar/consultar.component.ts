@@ -22,14 +22,17 @@ export class ConsultarComponent {
   }
 
   insertarFiltrosPuntoDeInteres(){
-    const container_puntosdeinteres = <HTMLDivElement> document.getElementById("container-puntosdeinteres");
-
+    const container_puntosdeinteres = <HTMLDivElement> document.getElementById("filtros-consultar-principales");
+    console.log(container_puntosdeinteres);
     for (var i = 0; i < this.puntosDeInteres.length; i++) {
       //Agregar DIV
       var puntosdeinteres = document.createElement("div");
       puntosdeinteres.setAttribute("id", "puntosdeinteres-" + i);
       puntosdeinteres.setAttribute("class", "btn-parametro-busqueda");
       puntosdeinteres.addEventListener("click", (event) => this.filtroSeleccion(event));
+
+      console.log(puntosdeinteres);
+
       container_puntosdeinteres.appendChild(puntosdeinteres);
 
       //Agregar SPAN
@@ -43,7 +46,6 @@ export class ConsultarComponent {
     // if (this.filtroSeleccionado == 0) {
 
     // }
-
     let componenteSeleccionado = filtro.target;
     let componenteSeleccionado_Id = "";
 
@@ -55,6 +57,8 @@ export class ConsultarComponent {
     }
 
     const filtroComponenteSeleccionado = <HTMLInputElement> document.getElementById(componenteSeleccionado_Id);
+
+    // this.visibilidadDeElementos();
 
     if (this.filtroSeleccionado_Id == "") {
       this.renderer.addClass(filtroComponenteSeleccionado, 'btn-parametro-busqueda-seleccionado');

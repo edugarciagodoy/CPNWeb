@@ -1,19 +1,11 @@
 <div class="m-3">
     <div class="row container-fluid">
-        <div class="col-2 filtros-mantenimiento p-2">
-            <h4 class="filtros-title">Filtros</h4>
-            <div class="filtros-mantenimiento-principales">
-                <div id="container-puntosdeinteres">
-                    <!-- <div class="btn-parametro-busqueda" id="btn-parametro-busqueda-01" (click)="filtroSeleccion($event)">
-                        <span>Hospitales a nivel nacional</span>
-                    </div>
-                    <div class="btn-parametro-busqueda" id="btn-parametro-busqueda-02" (click)="filtroSeleccion($event)">
-                        <span>Estaciones de bomberos a nivel nacional</span>
-                    </div>
-                    <div class="btn-parametro-busqueda" id="btn-parametro-busqueda-03" (click)="filtroSeleccion($event)">
-                        <span>Aeropuertos</span>
-                    </div> -->
-                </div>
+        <div class="col-2 filtros-mantenimiento p-2 offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+                <h4 class="filtros-title">Filtros</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div id="filtros-consultar-principales" class="filtros-mantenimiento-principales">
                 <div class="btn-parametro-busqueda" id="btn-parametro-codigo-postal" (click)="filtroSeleccion($event)">
                     <span>Código postal</span>
                 </div>
@@ -45,17 +37,26 @@
                 </div>
             </div>
         </div>
-        <div class="col m-3">
+        <div class="col">
             <div class="row container-fluid">
-                <div class="col container-btn-consultar">
-                    <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
-                        <span class="material-symbols-outlined">map_search</span>
-                        Consultas múltiples
-                    </button>
-                    <button type="button" class="btn btn-default btn-consultar-default btn-exportar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <span class="material-symbols-outlined">download</span>
-                        Exportar
-                    </button>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                <span class="material-symbols-outlined">tune</span>
+                            </button>
+                        </div>
+                        <div class="col container-btn-consultar">
+                            <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                                <span class="material-symbols-outlined">map_search</span>
+                                Consultas múltiples
+                            </button>
+                            <button type="button" class="btn btn-default btn-consultar-default btn-exportar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <span class="material-symbols-outlined">download</span>
+                                Exportar
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row mt-3">
