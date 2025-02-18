@@ -1,39 +1,45 @@
 <div class="m-3">
     <div class="row container-fluid">
         <div class="col-2 filtros-mantenimiento p-2 offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-            <div class="offcanvas-header">
+            <div class="filtros-header">
                 <h4 class="filtros-title">Filtros</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div id="filtros-consultar-principales" class="filtros-mantenimiento-principales">
-                <div class="btn-parametro-busqueda" id="btn-parametro-codigo-postal" (click)="filtroSeleccion($event)">
-                    <span>Código postal</span>
+            <div class="filtros-mantenimiento-principales">
+                <div id="filtros-label-principales">
+                    <div class="btn-parametro-busqueda" id="btn-parametro-codigo-postal" (click)="filtroSeleccion($event)">
+                        <span>Código postal</span>
+                    </div>
+                    <div class="btn-parametro-busqueda" id="btn-parametro-distrito-provincia-departamento" (click)="filtroSeleccion($event)">
+                        <span>Distrito / Provincia / Departamento</span>
+                    </div>
                 </div>
-                <div class="btn-parametro-busqueda" id="btn-parametro-distrito-provincia-departamento" (click)="filtroSeleccion($event)">
-                    <span>Distrito / Provincia / Departamento</span>
-                </div>
-                <div class="contenedor-txt-parametro-busqueda" hidden>
-                    <input type="text" name="" id="txt-distrito-provincia-departamento" class="form-control txt-parametro-busqueda">
+                <div class="contenedor-txt-parametro-busqueda">
+                    <input type="text" name="" id="txt-distrito-provincia-departamento" class="txt-parametro-busqueda">
                 </div>
             </div>
             <hr>
             <div class="filtros-mantenimiento-secundarios">
-                <div class="btn-parametro-busqueda btn-parametro-busqueda-seleccionado">
-                    <span>Dirección</span>
+                <div id="filtros-label-secundarios" class="filtros-departamento-provincia-distrito">
+                    <div class="btn-parametro-busqueda btn-parametro-busqueda-seleccionado">
+                        <span>Dirección</span>
+                    </div>
+                    <div class="btn-parametro-busqueda">
+                        <span>Centro poblado o localidad</span>
+                    </div>
+                    <div class="btn-parametro-busqueda">
+                        <span>Punto de interés</span>
+                    </div>
                 </div>
-                <div class="btn-parametro-busqueda">
-                    <span>Centro poblado o localidad</span>
-                </div>
-                <div class="btn-parametro-busqueda">
-                    <span>Punto de interés</span>
-                </div>
-                <div class="contenedor-txt-parametro-busqueda">
-                    <input type="text" name="" id="" placeholder="Dirección"
-                        class="form-control txt-parametro-busqueda">
-                </div>
-                <div class="contenedor-txt-parametro-busqueda">
-                    <input type="text" name="" id="" placeholder="Nro"
-                        class="form-control txt-parametro-busqueda">
+                <div class="container-principal-txt-parametro-busqueda">
+                    <div class="contenedor-txt-parametro-busqueda">
+                        <input type="text" name="" id="" placeholder="Dirección"
+                            class="txt-parametro-busqueda">
+                    </div>
+                    <div class="contenedor-txt-parametro-busqueda">
+                        <input type="text" name="" id="" placeholder="Nro"
+                            class="txt-parametro-busqueda">
+                    </div>
                 </div>
             </div>
         </div>

@@ -9,7 +9,10 @@ import { Component, Renderer2 } from '@angular/core';
 export class ConsultarComponent {
   puntosDeInteres:string[] = [];
   filtroSeleccionado:number = 0;
+  filtroAnterior_Id:string = "";
   filtroSeleccionado_Id:string = "";
+
+  seleccionArray:string[][] = [];
 
   constructor(private renderer: Renderer2) { }
 
@@ -22,7 +25,7 @@ export class ConsultarComponent {
   }
 
   insertarFiltrosPuntoDeInteres(){
-    const container_puntosdeinteres = <HTMLDivElement> document.getElementById("filtros-consultar-principales");
+    const container_puntosdeinteres = <HTMLDivElement> document.getElementById("filtros-label-principales");
     console.log(container_puntosdeinteres);
     for (var i = 0; i < this.puntosDeInteres.length; i++) {
       //Agregar DIV
@@ -42,38 +45,91 @@ export class ConsultarComponent {
     }
   }
 
-  filtroSeleccion(filtro:any){
-    // if (this.filtroSeleccionado == 0) {
-
-    // }
+  filtroSeleccion(filtro:any) {
     let componenteSeleccionado = filtro.target;
-    let componenteSeleccionado_Id = "";
-
+    let filtroSeleccionado_Id = "";
+    let filtroSeleccionadoPadre_Id = "";
+    
     if (componenteSeleccionado.tagName == 'SPAN'){
-      componenteSeleccionado_Id = componenteSeleccionado.parentNode.id;
+      filtroSeleccionado_Id = componenteSeleccionado.parentNode.id;
+      filtroSeleccionadoPadre_Id = componenteSeleccionado.parentNode.parentNode.id;
     }
     else{
-      componenteSeleccionado_Id = componenteSeleccionado.id;
+      filtroSeleccionado_Id = componenteSeleccionado.id;
+      filtroSeleccionadoPadre_Id = componenteSeleccionado.parentNode.id;
     }
+    
+    const componenteFiltroSeleccionado = <HTMLDivElement> document.getElementById(filtroSeleccionado_Id);
+    var arrayLocation = 0;
 
-    const filtroComponenteSeleccionado = <HTMLInputElement> document.getElementById(componenteSeleccionado_Id);
+    console.log('seleccionArray: ' + this.seleccionArray.length);
 
-    // this.visibilidadDeElementos();
+    if (this.seleccionArray.length == 0) {
+      this.renderer.addClass(componenteFiltroSeleccionado, 'btn-parametro-busqueda-seleccionado');
 
-    if (this.filtroSeleccionado_Id == "") {
-      this.renderer.addClass(filtroComponenteSeleccionado, 'btn-parametro-busqueda-seleccionado');
-      this.filtroSeleccionado_Id = filtroComponenteSeleccionado.id;
+      this.filtroAnterior_Id = filtroSeleccionado_Id;
+      console.log('filtroSeleccionadoPadre_Id: ', filtroSeleccionadoPadre_Id);
+      console.log(this.seleccionArray);
+
+      this.seleccionArray.push([filtroSeleccionadoPadre_Id, filtroSeleccionado_Id]);
     }
-    else{
-      const filtroComponenteSeleccionado_Antes = <HTMLInputElement> document.getElementById(this.filtroSeleccionado_Id);
+    else {
+      for(var i = 0; i < this.seleccionArray.length; i++) {
+        console.log(this.seleccionArray[i]);
 
-      this.renderer.removeClass(filtroComponenteSeleccionado_Antes, 'btn-parametro-busqueda-seleccionado');
-      
-      if (this.filtroSeleccionado_Id != componenteSeleccionado_Id) {
-        this.renderer.addClass(filtroComponenteSeleccionado, 'btn-parametro-busqueda-seleccionado');
-        this.filtroSeleccionado_Id = filtroComponenteSeleccionado.id;
+        for(var j = 0; j < this.seleccionArray[i].length; j++) {
+          console.log(this.seleccionArray[i][1])
+          if (this.seleccionArray[i][1] == filtroSeleccionado_Id) {
+            this.filtroAnterior_Id = "";
+            arrayLocation = i;
+          }
+          else {
+            this.renderer.addClass(componenteFiltroSeleccionado, 'btn-parametro-busqueda-seleccionado');
+  
+            this.filtroAnterior_Id = filtroSeleccionado_Id;    
+            this.seleccionArray.push([filtroSeleccionadoPadre_Id, filtroSeleccionado_Id]);
+          }
+        }
+
+      }
+
+      console.log(this.seleccionArray[arrayLocation][0]);
+
+      const componenteFiltroAnterior = <HTMLDivElement> document.getElementById(this.filtroAnterior_Id);
+
+      this.renderer.removeClass(componenteFiltroAnterior, 'btn-parametro-busqueda-seleccionado');
+
+      if (this.filtroAnterior_Id == filtroSeleccionado_Id) {
+        this.filtroAnterior_Id = "";
+      }
+      else if (this.filtroAnterior_Id != filtroSeleccionado_Id) {
+        this.renderer.addClass(componenteFiltroSeleccionado, 'btn-parametro-busqueda-seleccionado');
+  
+        this.filtroAnterior_Id = filtroSeleccionado_Id;
       }
     }
+
+    // if (filtroSeleccionado_Id[0][0] == "")
+
+    // if (this.filtroAnterior_Id == "") {
+    //   this.renderer.addClass(componenteFiltroSeleccionado, 'btn-parametro-busqueda-seleccionado');
+
+    //   this.filtroAnterior_Id = filtroSeleccionado_Id
+    // }
+    // else{
+    //   const componenteFiltroAnterior = <HTMLDivElement> document.getElementById(this.filtroAnterior_Id);
+
+    //   this.renderer.removeClass(componenteFiltroAnterior, 'btn-parametro-busqueda-seleccionado');
+
+    //   if (this.filtroAnterior_Id == filtroSeleccionado_Id) {
+    //     this.filtroAnterior_Id = "";
+    //   }
+    //   else if (this.filtroAnterior_Id.length > 0 && this.filtroAnterior_Id != filtroSeleccionado_Id) {
+    //     this.renderer.addClass(componenteFiltroSeleccionado, 'btn-parametro-busqueda-seleccionado');
+  
+    //     this.filtroAnterior_Id = filtroSeleccionado_Id;
+    //   }
+    // }
   }
 
   visibilidadDeElementos(componenteSeleccionado:string) {
