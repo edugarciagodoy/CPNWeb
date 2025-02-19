@@ -78,22 +78,24 @@ export class ConsultarComponent {
         console.log(this.seleccionArray[i]);
 
         for(var j = 0; j < this.seleccionArray[i].length; j++) {
-          console.log(this.seleccionArray[i][1])
+          console.log(this.seleccionArray[i][j])
           if (this.seleccionArray[i][1] == filtroSeleccionado_Id) {
+            console.log('i', i);
             this.filtroAnterior_Id = "";
             arrayLocation = i;
           }
-          else {
-            this.renderer.addClass(componenteFiltroSeleccionado, 'btn-parametro-busqueda-seleccionado');
+          // else {
+          //   this.renderer.addClass(componenteFiltroSeleccionado, 'btn-parametro-busqueda-seleccionado');
   
-            this.filtroAnterior_Id = filtroSeleccionado_Id;    
-            this.seleccionArray.push([filtroSeleccionadoPadre_Id, filtroSeleccionado_Id]);
-          }
+          //   this.filtroAnterior_Id = filtroSeleccionado_Id;    
+          //   this.seleccionArray.push([filtroSeleccionadoPadre_Id, filtroSeleccionado_Id]);
+          // }
         }
 
       }
 
-      console.log(this.seleccionArray[arrayLocation][0]);
+      console.log('arrayLocation', arrayLocation)
+      console.log('this.seleccionArray[arrayLocation][0]', this.seleccionArray[arrayLocation][0]);
 
       const componenteFiltroAnterior = <HTMLDivElement> document.getElementById(this.filtroAnterior_Id);
 

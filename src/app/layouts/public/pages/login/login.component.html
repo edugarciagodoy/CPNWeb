@@ -3,12 +3,12 @@
         <form action="" method="get">
             <h4>Iniciar sesión</h4>
             <label for="">Usuario</label>
-            <input type="text" class="w-100" name="" id="">
+            <input type="text" [(ngModel)]="usuario" class="w-100" name="login" id="" >
             <label for="">Contraseña</label>
-            <input type="password" class="w-100" name="" id="">
+            <input type="password" [(ngModel)]="password" class="w-100" name="password" id="">
             <label for="">Recaptcha</label>
             <input type="text" class="w-100" name="" id="">
-            <button type="button" class="btn btn-danger mt-2 w-100">INGRESAR</button>
+            <button type="button" class="btn btn-danger mt-2 w-100" (click)="login()">INGRESAR</button>
             <div class="reg-recov">
                 <a class="text-start a-solicitarusuario" href="/solicitarusuario">Solicitar usuario</a>
                 <a class="text-end a-recuperarclave" href="/recuperarclave">RECUPERAR CONTRASEÑA</a>
