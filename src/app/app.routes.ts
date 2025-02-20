@@ -9,7 +9,7 @@ import { MantenimientoComponent } from './layouts/public/pages/mantenimiento/man
 import { SolicitarusuarioComponent } from './layouts/public/pages/solicitarusuario/solicitarusuario.component';
 import { MicuentaComponent } from './layouts/public/pages/micuenta/micuenta.component';
 import { GestiondeusuariosComponent } from './layouts/public/pages/gestiondeusuarios/gestiondeusuarios.component';
-import { SalirComponent } from './layouts/public/pages/salir/salir.component';
+import { LogoutComponent } from './layouts/public/pages/logout/logout.component';
 import { RecuperarclaveComponent } from './layouts/public/pages/recuperarclave/recuperarclave.component';
 import { IngresadigitosComponent } from './layouts/public/pages/ingresadigitos/ingresadigitos.component';
 import { NuevaclaveComponent } from './layouts/public/pages/nuevaclave/nuevaclave.component';
@@ -25,11 +25,11 @@ export const routes: Routes = [
     { path: 'contactenos', component: ContactenosComponent },
     { path: 'definicion', component: DefinicionComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'logout', component: LogoutComponent },
     { path: 'mantenimiento', component: MantenimientoComponent },
     { path: 'solicitarusuario', component: SolicitarusuarioComponent },
     { path: 'micuenta', component: MicuentaComponent },
     { path: 'gestiondeusuarios', component: GestiondeusuariosComponent },
-    { path: 'salir', component: SalirComponent },
     { path: 'recuperarclave', component: RecuperarclaveComponent },
     { path: 'ingresadigitos', component: IngresadigitosComponent },
     { path: 'nuevaclave', component: NuevaclaveComponent },

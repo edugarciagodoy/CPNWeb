@@ -7,8 +7,10 @@
 }
 
 .menu-consultar {
-    display: flex;
-    align-items: center;
+    display: block;
+    padding-left: 0 !important;
+    align-content: center;
+    width: fit-content;
 }
 
 .menu-consultar a {
