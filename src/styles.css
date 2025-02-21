@@ -501,3 +501,25 @@ th {
 } */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-step-icon {
+    font-size: 3rem !important;
+    height: 60px !important;
+    width: 60px !important;
+    background-color: #EBF0FE !important;
+}
+
+mat-step-header,
+mat-step-header:hover {
+    background: none !important;
+}
+
+.mat-step-label {
+    display: none !important;
+}
+
+.mat-step-icon-selected {
+    background-color: #004AAD !important;
+    color: #FFFFFF !important;
+}

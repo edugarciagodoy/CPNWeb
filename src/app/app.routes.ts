@@ -15,6 +15,7 @@ import { IngresadigitosComponent } from './layouts/public/pages/ingresadigitos/i
 import { NuevaclaveComponent } from './layouts/public/pages/nuevaclave/nuevaclave.component';
 import { Comobuscar2Component } from './layouts/public/pages/comobuscar2/comobuscar2.component';
 import { CuentarecuperadaComponent } from './layouts/public/pages/cuentarecuperada/cuentarecuperada.component';
+import { Micuenta2Component } from './layouts/public/pages/micuenta2/micuenta2.component';
 
 export const routes: Routes = [
     // { path: '**', redirectTo: 'home', pathMatch: 'full' }, // Redirección si la ruta no existe
@@ -29,6 +30,7 @@ export const routes: Routes = [
     { path: 'mantenimiento', component: MantenimientoComponent },
     { path: 'solicitarusuario', component: SolicitarusuarioComponent },
     { path: 'micuenta', component: MicuentaComponent },
+    { path: 'micuenta2', component: Micuenta2Component },   //TEMPORAL
     { path: 'gestiondeusuarios', component: GestiondeusuariosComponent },
     { path: 'recuperarclave', component: RecuperarclaveComponent },
     { path: 'ingresadigitos', component: IngresadigitosComponent },

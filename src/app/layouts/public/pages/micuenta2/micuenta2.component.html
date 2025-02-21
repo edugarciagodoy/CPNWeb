@@ -1,0 +1,124 @@
+<div class="container-sm mt-3">
+    <ul class="nav nav-underline" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                <span class="material-symbols-outlined">person</span>
+                Datos del usuario
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                <span class="material-symbols-outlined">work</span>
+                Datos del centro de labores
+            </button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div class="card-micuenta mt-2">
+                <div class="card-section-titulo">
+                    <span class="card-titulo">
+                        <span class="material-symbols-outlined">person</span>
+                        <span class="card-titulo-texto">Datos del usuario</span>
+                    </span>
+                    <button class="btn-editar">
+                        <span class="material-symbols-outlined">border_color</span>
+                        Editar
+                    </button>
+                </div>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                      <label for="mcUsuarioTipoDeDocumentoDeIdentidad" class="form-label">Documento de identidad</label>
+                      <input type="text" class="form-control" id="mcTipoDeDocumentoDeIdentidad">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="mcUsuarioNroDeDocumentoDeIdentidad" class="form-label">Nro. de documento de identidad</label>
+                      <input type="text" class="form-control" id="mcUsuarioNroDeDocumentoDeIdentidad">
+                    </div>
+                    <div class="col-6">
+                      <label for="mcUsuarioApellidoPaterno" class="form-label">Apellido paterno</label>
+                      <input type="text" class="form-control" id="mcUsuarioApellidoPaterno">
+                    </div>
+                    <div class="col-6">
+                      <label for="mcUsuarioApellidoMaterno" class="form-label">Apellido materno</label>
+                      <input type="text" class="form-control" id="mcUsuarioApellidoMaterno">
+                    </div>
+                    <div class="col-md-9">
+                      <label for="mcUsuarioNombre" class="form-label">Nombre(s)</label>
+                      <input type="text" class="form-control" id="mcUsuarioNombre">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="mcUsuarioNroCelular" class="form-label">Nro. celular*</label>
+                      <input type="text" class="form-control" id="mcUsuarioNroCelular">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="mcUsuarioDepartamento" class="form-label">Departamento*</label>
+                      <input type="text" class="form-control" id="mcUsuarioDepartamento">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="mcUsuarioProvincia" class="form-label">Provincia*</label>
+                      <input type="text" class="form-control" id="mcUsuarioProvincia">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="mcUsuarioDistrito" class="form-label">Distrito*</label>
+                      <input type="text" class="form-control" id="mcUsuarioDistrito">
+                    </div>
+                    <div class="col-12">
+                        <label for="mcUsuarioDireccion" class="form-label">Dirección*</label>
+                        <input type="text" class="form-control" id="mcUsuarioDireccion">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="card-micuenta mt-2">
+                <div class="card-section-titulo">
+                    <span class="card-titulo">
+                        <span class="material-symbols-outlined">work</span>
+                        <span class="card-titulo-texto">Datos del centro de labores</span>
+                    </span>
+                    <button class="btn-editar">
+                        <span class="material-symbols-outlined">border_color</span>
+                        Editar
+                    </button>
+                </div>
+                <form class="row g-3">
+                    <div class="col-md-12">
+                      <label for="mcTrabajadorNroDeDocumentoDeIdentidad" class="form-label">Nro. de RUC</label>
+                      <input type="text" class="form-control" id="mcTrabajadorNroDeDocumentoDeIdentidad">
+                    </div>
+                    <div class="col-md-12">
+                      <label for="mcTrabajadorRazonSocial" class="form-label">Razón social</label>
+                      <input type="text" class="form-control" id="mcTrabajadorRazonSocial">
+                    </div>
+                    <div class="col-md-9">
+                      <label for="mcTrabajadorCorreoInstitucional" class="form-label">Correo institucional*</label>
+                      <input type="email" class="form-control" id="mcTrabajadorCorreoInstitucional">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="mcTrabajadorNroCelular" class="form-label">Nro. celular*</label>
+                      <input type="text" class="form-control" id="mcTrabajadorNroCelular">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="mcTrabajadorDepartamento" class="form-label">Departamento*</label>
+                      <input type="text" class="form-control" id="mcTrabajadorDepartamento">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="mcTrabajadorProvincia" class="form-label">Provincia*</label>
+                      <input type="text" class="form-control" id="mcTrabajadorProvincia">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="mcTrabajadorDistrito" class="form-label">Distrito*</label>
+                      <input type="text" class="form-control" id="mcTrabajadorDistrito">
+                    </div>
+                    <div class="col-12">
+                        <label for="mcTrabajadorDireccion" class="form-label">Dirección*</label>
+                        <input type="text" class="form-control" id="mcTrabajadorDireccion">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

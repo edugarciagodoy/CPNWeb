@@ -1,4 +1,177 @@
-<div class="container-principal">
+<!-- <mat-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill out your address</ng-template>
+            <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+    </mat-step>
+</mat-stepper> -->
+
+<div class="container-sm container-principal">
+    <div class="container row g-2">
+        <!-- #docregion states -->
+        <mat-stepper>
+            <!-- #docregion label -->
+            <!-- <mat-step state="phone"> -->
+            <mat-step>
+                <div class="row row-cols-1 row-cols-md-4 g-2 card-group container-login">
+                    <form action="" method="get">
+                        <h4 class="identificacion-de-usuario-title">Identificación del usuario</h4>
+                        <label for="">Documento de identidad</label>
+                        <input type="text" class="w-100" name="" id="">
+                        <label for="">Nro. de documento de identidad</label>
+                        <input type="text" class="w-100" name="" id="">
+                        <button type="button" class="btn btn-verificar mt-2 w-100">VERIFICAR</button>
+                    </form>
+                </div>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <!-- #enddocregion label -->
+            <mat-step>
+                <div class="container-sm">
+                    <form class="row g-3">
+                        <h4 class="identificacion-de-usuario-title">Identificación del usuario</h4>
+                        <div class="col-md-6">
+                          <label for="mcUsuarioTipoDeDocumentoDeIdentidad" class="form-label">Documento de identidad</label>
+                          <input type="text" class="form-control" id="mcTipoDeDocumentoDeIdentidad" disabled>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="mcUsuarioNroDeDocumentoDeIdentidad" class="form-label">Nro. de documento de identidad</label>
+                          <input type="text" class="form-control" id="mcUsuarioNroDeDocumentoDeIdentidad" disabled>
+                        </div>
+                        <div class="col-6">
+                          <label for="mcUsuarioApellidoPaterno" class="form-label">Apellido paterno</label>
+                          <input type="text" class="form-control" id="mcUsuarioApellidoPaterno" disabled>
+                        </div>
+                        <div class="col-6">
+                          <label for="mcUsuarioApellidoMaterno" class="form-label">Apellido materno</label>
+                          <input type="text" class="form-control" id="mcUsuarioApellidoMaterno" disabled>
+                        </div>
+                        <div class="col-md-9">
+                          <label for="mcUsuarioNombre" class="form-label">Nombre(s)</label>
+                          <input type="text" class="form-control" id="mcUsuarioNombre" disabled>
+                        </div>
+                        <div class="col-md-3">
+                          <label for="mcUsuarioNroCelular" class="form-label">Nro. celular*</label>
+                          <input type="text" class="form-control" id="mcUsuarioNroCelular">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="mcUsuarioDepartamento" class="form-label">Departamento*</label>
+                          <input type="text" class="form-control" id="mcUsuarioDepartamento">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="mcUsuarioProvincia" class="form-label">Provincia*</label>
+                          <input type="text" class="form-control" id="mcUsuarioProvincia">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="mcUsuarioDistrito" class="form-label">Distrito*</label>
+                          <input type="text" class="form-control" id="mcUsuarioDistrito">
+                        </div>
+                        <div class="col-12">
+                            <label for="mcUsuarioDireccion" class="form-label">Dirección*</label>
+                            <input type="text" class="form-control" id="mcUsuarioDireccion">
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <button mat-button matStepperPrevious>Atrás</button>
+                    <button mat-button matStepperNext>Siguiente</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <div class="container-sm">
+                    <form class="row g-3">
+                        <h4 class="identificacion-de-usuario-title">Identificación del usuario</h4>
+                        <div class="col-md-12">
+                          <label for="mcTrabajadorNroDeDocumentoDeIdentidad" class="form-label">Nro. de RUC</label>
+                          <input type="text" class="form-control" id="mcTrabajadorNroDeDocumentoDeIdentidad">
+                        </div>
+                        <div class="col-md-12">
+                          <label for="mcTrabajadorRazonSocial" class="form-label">Razón social</label>
+                          <input type="text" class="form-control" id="mcTrabajadorRazonSocial">
+                        </div>
+                        <div class="col-md-9">
+                          <label for="mcTrabajadorCorreoInstitucional" class="form-label">Correo institucional*</label>
+                          <input type="email" class="form-control" id="mcTrabajadorCorreoInstitucional">
+                        </div>
+                        <div class="col-md-3">
+                          <label for="mcTrabajadorNroCelular" class="form-label">Nro. celular*</label>
+                          <input type="text" class="form-control" id="mcTrabajadorNroCelular">
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                          <div id="mcTrabajadorCorreoInstitucional" class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="mcTrabajadorDepartamento" class="form-label">Departamento*</label>
+                          <input type="text" class="form-control" id="mcTrabajadorDepartamento">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="mcTrabajadorProvincia" class="form-label">Provincia*</label>
+                          <input type="text" class="form-control" id="mcTrabajadorProvincia">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="mcTrabajadorDistrito" class="form-label">Distrito*</label>
+                          <input type="text" class="form-control" id="mcTrabajadorDistrito">
+                        </div>
+                        <div class="col-12">
+                            <label for="mcTrabajadorDireccion" class="form-label">Dirección*</label>
+                            <input type="text" class="form-control" id="mcTrabajadorDireccion">
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <!-- #enddocregion label -->
+            <mat-step>
+                <p>You're welcome.</p>
+            </mat-step>
+
+            <!-- Icon overrides. -->
+            <!-- #docregion override-icons -->
+            <!-- <ng-template matStepperIcon="phone">
+                <mat-icon>call_end</mat-icon>
+            </ng-template>
+            <ng-template matStepperIcon="chat">
+                <mat-icon>forum</mat-icon>
+            </ng-template> -->
+        </mat-stepper>
+    </div>
+<!--     
     <div class="container-sm row g-2">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -12,12 +185,7 @@
         </nav>
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-                <h4>Identificación del usuario</h4>
-                <label for="">Documento de identidad</label>
-                <input type="text" class="w-100" name="" id="">
-                <label for="">Nro. de documento de identidad</label>
-                <input type="text" class="w-100" name="" id="">
-                <button type="button" class="btn btn-danger mt-2 w-100">VERIFICAR</button>
+                
             </div>
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
                 
@@ -29,5 +197,5 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 </div>

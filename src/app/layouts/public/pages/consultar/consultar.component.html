@@ -57,7 +57,7 @@
                                 <span class="material-symbols-outlined">map_search</span>
                                 Consultas múltiples
                             </button>
-                            <button type="button" class="btn btn-default btn-consultar-default btn-exportar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <button type="button" class="btn btn-default btn-consultar-default btn-exportar">
                                 <span class="material-symbols-outlined">download</span>
                                 Exportar
                             </button>
@@ -70,11 +70,11 @@
             </div>
             <div class="row mt-3">
                 <div class="container-btn-extra">
-                    <button type="button" class="btn btn-default btn-consultar-default btn-como-consultar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button type="button" class="btn btn-default btn-consultar-default btn-como-consultar" data-bs-toggle="modal" data-bs-target="#modal-como-buscar">
                         <span class="material-symbols-outlined">help</span>
                         ¿Cómo buscar?
                     </button>
-                    <button type="button" class="btn btn-default btn-consultar-default btn-comentario" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button type="button" class="btn btn-default btn-consultar-default btn-comentario" data-bs-toggle="modal" data-bs-target="#modal-comentario">
                         <span class="material-symbols-outlined">forum</span>
                         Comentario
                     </button>
@@ -83,53 +83,86 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="modal-consultas-multiples" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-aria-labelledby="modal-consultas-multiples-Label" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-        <div class="modal-body container-fluid">
-            <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-consultas-multiples-Label">Consultas múltiples</h1>
-            <hr class="mantenimiento-modal-separador">
-            <div class="consultas-multiples-btn">
-                <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
-                    <span class="material-symbols-outlined">home_pin</span>
-                    Dirección
-                </button>
-                <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
-                    <span class="material-symbols-outlined">pin_drop</span>
-                    Coordenadas
-                </button>
-            </div>
-            <div class="mt-2">
-                <span class="consultar-titulos">Archivo plantilla para descargar</span>
-                <div class="container-archivo-plantilla">
-                    <span class="material-symbols-outlined icono-archivo">description</span>
-                    <div class="container-texto-archivo">
-                        <span class="nombre-de-archivo texto-archivo">Nombre_de_archivo</span>
-                        <div class="container-descripcion-archivo">
-                            <span class="tipo-de-archivo texto-archivo descripcion-archivo">XLXS</span>
-                            <span class="separador texto-archivo">
-                                ·
-                            </span>
-                            <span class="peso-de-archivo texto-archivo descripcion-archivo">4.49 KB</span>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-default btn-consultas-multiples-descargar" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
-                        <span class="material-symbols-outlined">cloud_download</span>
-                        Descargar
+<div class="modal fade" id="modal-consultas-multiples" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-consultas-multiples-Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body container-fluid">
+                <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-consultas-multiples-Label">Consultas múltiples</h1>
+                <hr class="mantenimiento-modal-separador">
+                <div class="consultas-multiples-btn">
+                    <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                        <span class="material-symbols-outlined">home_pin</span>
+                        Dirección
+                    </button>
+                    <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                        <span class="material-symbols-outlined">pin_drop</span>
+                        Coordenadas
                     </button>
                 </div>
-            </div>
-            <div class="mt-2">
-                <span class="consultar-titulos">Cargar archivo</span>
-                <div class="container-cargar-archivo">
-                    <span class="material-symbols-outlined icono-archivo">description</span>
-                    <span class="nombre-de-archivo texto-archivo">Arrastre y suelte el archivo aquí o</span>
-                    <button type="button" class="btn btn-default btn-consultas-multiples-descargar">Escoger archivo</button>
-                    <input type="file" name="" id="" hidden>
+                <div class="mt-2">
+                    <span class="consultar-titulos">Archivo plantilla para descargar</span>
+                    <div class="container-archivo-plantilla">
+                        <span class="material-symbols-outlined icono-archivo">description</span>
+                        <div class="container-texto-archivo">
+                            <span class="nombre-de-archivo texto-archivo">Nombre_de_archivo</span>
+                            <div class="container-descripcion-archivo">
+                                <span class="tipo-de-archivo texto-archivo descripcion-archivo">XLXS</span>
+                                <span class="separador texto-archivo">
+                                    ·
+                                </span>
+                                <span class="peso-de-archivo texto-archivo descripcion-archivo">4.49 KB</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-default btn-consultas-multiples-descargar" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                            <span class="material-symbols-outlined">cloud_download</span>
+                            Descargar
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <span class="consultar-titulos">Cargar archivo</span>
+                    <div class="container-cargar-archivo">
+                        <span class="material-symbols-outlined icono-archivo">description</span>
+                        <span class="nombre-de-archivo texto-archivo">Arrastre y suelte el archivo aquí o</span>
+                        <button type="button" class="btn btn-default btn-consultas-multiples-descargar">Escoger archivo</button>
+                        <input type="file" name="" id="" hidden>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="modal fade" id="modal-como-buscar" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-como-buscar-Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-comentario" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-comentario-Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
 </div>

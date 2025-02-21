@@ -1,0 +1,20 @@
+
+.mat-stepper-horizontal {
+    background: #FFFFFF;
+    margin-top: 8px;
+}
+  
+.mat-mdc-form-field {
+    background: #FFFFFF;
+    margin-top: 16px;
+}
+
+.identificacion-de-usuario-title {
+    color: #004AAD;
+    font-weight: 700;
+}
+
+.btn-verificar {
+    background-color: #004AAD;
+    color: #FFFFFF; 
+}
