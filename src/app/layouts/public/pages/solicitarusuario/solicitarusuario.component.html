@@ -42,13 +42,23 @@
             <!-- <mat-step state="phone"> -->
             <mat-step>
                 <div class="row row-cols-1 row-cols-md-4 g-2 card-group container-login">
-                    <form action="" method="get">
+                    <form class="needs-validation" action="" method="get">
                         <h4 class="identificacion-de-usuario-title">Identificación del usuario</h4>
                         <label for="">Documento de identidad</label>
-                        <input type="text" class="w-100" name="" id="">
-                        <label for="">Nro. de documento de identidad</label>
-                        <input type="text" class="w-100" name="" id="">
-                        <button type="button" class="btn btn-verificar mt-2 w-100">VERIFICAR</button>
+                        <!-- <input type="text" class="w-100" name="" id=""> -->
+                        <select [(ngModel)]="opcionSeleccionado" (change)="capturar()" class="w-100 form-control" name="selectDocumento">
+                            <option value="0">Selecciona una opción</option>
+                            <option *ngFor="let dato of datos">
+                                {{dato}}
+                            </option>
+                        </select>
+                        <!-- <p [hidden]="opcionSeleccionado == '0'">Haz seleccionado la opción # {{ verSeleccion }}</p> -->
+                        <label for="nroDocumentoDeIdentidad">Nro. de documento de identidad</label>
+                        <input type="text" class="w-100 form-control" name="nroDocumentoDeIdentidad" id="nroDocumentoDeIdentidad" required autocomplete="off">
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                        <button type="button" class="btn btn-verificar mt-2 w-100" (click)="verificarUsuario()">VERIFICAR</button>
                     </form>
                 </div>
                 <div>
@@ -62,23 +72,23 @@
                         <h4 class="identificacion-de-usuario-title">Identificación del usuario</h4>
                         <div class="col-md-6">
                           <label for="mcUsuarioTipoDeDocumentoDeIdentidad" class="form-label">Documento de identidad</label>
-                          <input type="text" class="form-control" id="mcTipoDeDocumentoDeIdentidad" disabled>
+                          <input type="text" class="form-control" id="mcTipoDeDocumentoDeIdentidad" value="DNI" disabled>
                         </div>
                         <div class="col-md-6">
                           <label for="mcUsuarioNroDeDocumentoDeIdentidad" class="form-label">Nro. de documento de identidad</label>
-                          <input type="text" class="form-control" id="mcUsuarioNroDeDocumentoDeIdentidad" disabled>
+                          <input type="text" class="form-control" id="mcUsuarioNroDeDocumentoDeIdentidad" value="45678912" disabled>
                         </div>
                         <div class="col-6">
                           <label for="mcUsuarioApellidoPaterno" class="form-label">Apellido paterno</label>
-                          <input type="text" class="form-control" id="mcUsuarioApellidoPaterno" disabled>
+                          <input type="text" class="form-control" id="mcUsuarioApellidoPaterno" value="García" disabled>
                         </div>
                         <div class="col-6">
                           <label for="mcUsuarioApellidoMaterno" class="form-label">Apellido materno</label>
-                          <input type="text" class="form-control" id="mcUsuarioApellidoMaterno" disabled>
+                          <input type="text" class="form-control" id="mcUsuarioApellidoMaterno" value="Godoy" disabled>
                         </div>
                         <div class="col-md-9">
                           <label for="mcUsuarioNombre" class="form-label">Nombre(s)</label>
-                          <input type="text" class="form-control" id="mcUsuarioNombre" disabled>
+                          <input type="text" class="form-control" id="mcUsuarioNombre" value="Eduardo" disabled>
                         </div>
                         <div class="col-md-3">
                           <label for="mcUsuarioNroCelular" class="form-label">Nro. celular*</label>
@@ -110,40 +120,40 @@
             <mat-step>
                 <div class="container-sm">
                     <form class="row g-3">
-                        <h4 class="identificacion-de-usuario-title">Identificación del usuario</h4>
+                        <h4 class="identificacion-de-usuario-title">Identificación del centro de labores</h4>
                         <div class="col-md-12">
-                          <label for="mcTrabajadorNroDeDocumentoDeIdentidad" class="form-label">Nro. de RUC</label>
-                          <input type="text" class="form-control" id="mcTrabajadorNroDeDocumentoDeIdentidad">
+                            <label for="mcTrabajadorRazonSocial" class="form-label">Razón social</label>
+                            <input type="text" class="form-control" id="mcTrabajadorRazonSocial">
                         </div>
                         <div class="col-md-12">
-                          <label for="mcTrabajadorRazonSocial" class="form-label">Razón social</label>
-                          <input type="text" class="form-control" id="mcTrabajadorRazonSocial">
+                            <label for="mcTrabajadorNroDeDocumentoDeIdentidad" class="form-label">Nro. de RUC</label>
+                            <input type="text" class="form-control" id="mcTrabajadorNroDeDocumentoDeIdentidad">
                         </div>
                         <div class="col-md-9">
-                          <label for="mcTrabajadorCorreoInstitucional" class="form-label">Correo institucional*</label>
-                          <input type="email" class="form-control" id="mcTrabajadorCorreoInstitucional">
+                            <label for="mcTrabajadorCorreoInstitucional" class="form-label">Correo institucional*</label>
+                            <input type="email" class="form-control" id="mcTrabajadorCorreoInstitucional">
                         </div>
                         <div class="col-md-3">
-                          <label for="mcTrabajadorNroCelular" class="form-label">Nro. celular*</label>
-                          <input type="text" class="form-control" id="mcTrabajadorNroCelular">
-                          <div class="valid-feedback">
-                            Looks good!
-                          </div>
-                          <div id="mcTrabajadorCorreoInstitucional" class="invalid-feedback">
-                            Please choose a username.
-                          </div>
+                            <label for="mcTrabajadorNroCelular" class="form-label">Nro. celular*</label>
+                            <input type="text" class="form-control" id="mcTrabajadorNroCelular">
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div id="mcTrabajadorCorreoInstitucional" class="invalid-feedback">
+                                Please choose a username.
+                            </div>
                         </div>
                         <div class="col-md-4">
-                          <label for="mcTrabajadorDepartamento" class="form-label">Departamento*</label>
-                          <input type="text" class="form-control" id="mcTrabajadorDepartamento">
+                            <label for="mcTrabajadorDepartamento" class="form-label">Departamento*</label>
+                            <input type="text" class="form-control" id="mcTrabajadorDepartamento">
                         </div>
                         <div class="col-md-4">
-                          <label for="mcTrabajadorProvincia" class="form-label">Provincia*</label>
-                          <input type="text" class="form-control" id="mcTrabajadorProvincia">
+                            <label for="mcTrabajadorProvincia" class="form-label">Provincia*</label>
+                            <input type="text" class="form-control" id="mcTrabajadorProvincia">
                         </div>
                         <div class="col-md-4">
-                          <label for="mcTrabajadorDistrito" class="form-label">Distrito*</label>
-                          <input type="text" class="form-control" id="mcTrabajadorDistrito">
+                            <label for="mcTrabajadorDistrito" class="form-label">Distrito*</label>
+                            <input type="text" class="form-control" id="mcTrabajadorDistrito">
                         </div>
                         <div class="col-12">
                             <label for="mcTrabajadorDireccion" class="form-label">Dirección*</label>

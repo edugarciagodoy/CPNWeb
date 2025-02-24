@@ -523,3 +523,7 @@ mat-step-header:hover {
     background-color: #004AAD !important;
     color: #FFFFFF !important;
 }
+
+select:hover {
+    cursor: pointer !important;
+}
