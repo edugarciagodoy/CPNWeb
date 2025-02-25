@@ -9,7 +9,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {AsyncPipe, CommonModule} from '@angular/common';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-solicitarusuario',
@@ -26,7 +26,6 @@ import {AsyncPipe, CommonModule} from '@angular/common';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    AsyncPipe,
     MatIconModule,
     CommonModule
   ],
