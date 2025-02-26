@@ -37,7 +37,7 @@
 <div class="container-sm container-principal">
     <div class="container row g-2">
         <!-- #docregion states -->
-        <mat-stepper>
+        <mat-stepper #stepper>
             <!-- #docregion label -->
             <!-- <mat-step state="phone"> -->
             <mat-step>
@@ -46,23 +46,29 @@
                         <h4 class="identificacion-de-usuario-title">Identificación del usuario</h4>
                         <label for="">Documento de identidad</label>
                         <!-- <input type="text" class="w-100" name="" id=""> -->
-                        <select [(ngModel)]="opcionSeleccionado" (change)="capturar()" class="w-100 form-control" name="selectDocumento">
+                        <select [(ngModel)]="opcionSeleccionado" (change)="capturar()" class="w-100 form-control" name="tipoDocumentoDeIdentidad" id="tipoDocumentoDeIdentidad">
                             <option value="0">Selecciona una opción</option>
                             <option *ngFor="let dato of datos">
                                 {{dato}}
                             </option>
                         </select>
+                        <div class="invalid-feedback" id="tipoDocumentoDeIdentidadError">
+                            Es necesario seleccionar tipo de documento de identidad
+                        </div>
                         <!-- <p [hidden]="opcionSeleccionado == '0'">Haz seleccionado la opción # {{ verSeleccion }}</p> -->
                         <label for="nroDocumentoDeIdentidad">Nro. de documento de identidad</label>
                         <input type="text" class="w-100 form-control" name="nroDocumentoDeIdentidad" id="nroDocumentoDeIdentidad" required autocomplete="off">
-                        <div class="invalid-feedback">
-                            Please provide a valid city.
+                        <div class="invalid-feedback" id="nroDocumentoDeIdentidadError">
+                            Es necesario ingresar documento de identidad
                         </div>
-                        <button type="button" class="btn btn-verificar mt-2 w-100" (click)="verificarUsuario()">VERIFICAR</button>
+                        <!-- <button type="button" class="btn btn-verificar mt-2 w-100" (click)="verificarUsuario()">VERIFICAR</button> -->
+                        <button type="button" class="btn btn-verificar mt-2 w-100" (click)="verificarUsuario(stepper)" mat-button matStepperNext>VERIFICAR</button>
+                        <!-- <button (click)="goBack(stepper)" type="button">Back</button>
+                        <button (click)="goForward(stepper)" type="button">Next</button> -->
                     </form>
                 </div>
                 <div>
-                    <button mat-button matStepperNext>Next</button>
+                    <!-- <button mat-button matStepperNext>Next</button> -->
                 </div>
             </mat-step>
             <!-- #enddocregion label -->
