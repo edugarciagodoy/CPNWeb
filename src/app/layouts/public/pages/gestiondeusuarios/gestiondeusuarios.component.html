@@ -1,34 +1,46 @@
 <div class="m-3">
     <div class="row container-fluid">
-        <div class="col-2 filtros-mantenimiento p-2">
-            <h4 class="filtros-title">Filtros</h4>
+        <div class="col-2 filtros-mantenimiento p-2 offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+            <div class="filtros-header">
+                <h4 class="filtros-title">Filtros</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
             <div class="filtros-mantenimiento-principales">
                 <span class="filtro-subtitulo">Por empresa</span>
-                <div class="btn-parametro-busqueda">
-                    <span>DHL</span>
-                </div>
-                <div class="btn-parametro-busqueda">
-                    <span>Shalom</span>
-                </div>
-                <div class="btn-parametro-busqueda">
-                    <span>Olva</span>
-                </div>
-                <div class="btn-parametro-busqueda">
-                    <span>Serpost</span>
+                <div class="contenedor-btn-parametro-busqueda">
+                    <div class="btn-parametro-busqueda">
+                        <span>DHL</span>
+                    </div>
+                    <div class="btn-parametro-busqueda">
+                        <span>Shalom</span>
+                    </div>
+                    <div class="btn-parametro-busqueda">
+                        <span>Olva</span>
+                    </div>
+                    <div class="btn-parametro-busqueda">
+                        <span>Serpost</span>
+                    </div>
                 </div>
                 <span class="filtro-subtitulo">Por estado</span>
-                <div class="btn-parametro-busqueda">
-                    <span>Pendiente</span>
-                </div>
-                <div class="btn-parametro-busqueda">
-                    <span>Rechazado</span>
-                </div>
-                <div class="btn-parametro-busqueda">
-                    <span>Aprobado</span>
+                <div class="contenedor-btn-parametro-busqueda">
+                    <div class="btn-parametro-busqueda">
+                        <span>Pendiente</span>
+                    </div>
+                    <div class="btn-parametro-busqueda">
+                        <span>Rechazado</span>
+                    </div>
+                    <div class="btn-parametro-busqueda">
+                        <span>Aprobado</span>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col m-3">
+            <div class="col">
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                    <span class="material-symbols-outlined">tune</span>
+                </button>
+            </div>
             <div class="row container-fluid">
                 <span class="titulo">Solicitudes de creación de usuarios</span>
             </div>

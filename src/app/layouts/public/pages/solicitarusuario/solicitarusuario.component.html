@@ -128,20 +128,20 @@
                     <form class="row g-3">
                         <h4 class="identificacion-de-usuario-title">Identificación del centro de labores</h4>
                         <div class="col-md-12">
-                            <label for="mcTrabajadorRazonSocial" class="form-label">Razón social</label>
-                            <input type="text" class="form-control" id="mcTrabajadorRazonSocial">
+                            <label for="mcTrabajadorRazonSocial" class="form-label">Razón social*</label>
+                            <input type="text" class="form-control" id="mcTrabajadorRazonSocial" value="Shalom">
                         </div>
                         <div class="col-md-12">
                             <label for="mcTrabajadorNroDeDocumentoDeIdentidad" class="form-label">Nro. de RUC</label>
-                            <input type="text" class="form-control" id="mcTrabajadorNroDeDocumentoDeIdentidad">
+                            <input type="text" class="form-control" id="mcTrabajadorNroDeDocumentoDeIdentidad" value="45612378912345" disabled>
                         </div>
                         <div class="col-md-9">
                             <label for="mcTrabajadorCorreoInstitucional" class="form-label">Correo institucional*</label>
-                            <input type="email" class="form-control" id="mcTrabajadorCorreoInstitucional">
+                            <input type="email" class="form-control" id="mcTrabajadorCorreoInstitucional" value="egarcia@shalom.com">
                         </div>
                         <div class="col-md-3">
                             <label for="mcTrabajadorNroCelular" class="form-label">Nro. celular*</label>
-                            <input type="text" class="form-control" id="mcTrabajadorNroCelular">
+                            <input type="text" class="form-control" id="mcTrabajadorNroCelular" value="965872341">
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -151,19 +151,19 @@
                         </div>
                         <div class="col-md-4">
                             <label for="mcTrabajadorDepartamento" class="form-label">Departamento*</label>
-                            <input type="text" class="form-control" id="mcTrabajadorDepartamento">
+                            <input type="text" class="form-control" id="mcTrabajadorDepartamento" value="Lima">
                         </div>
                         <div class="col-md-4">
                             <label for="mcTrabajadorProvincia" class="form-label">Provincia*</label>
-                            <input type="text" class="form-control" id="mcTrabajadorProvincia">
+                            <input type="text" class="form-control" id="mcTrabajadorProvincia" value="Lima">
                         </div>
                         <div class="col-md-4">
                             <label for="mcTrabajadorDistrito" class="form-label">Distrito*</label>
-                            <input type="text" class="form-control" id="mcTrabajadorDistrito">
+                            <input type="text" class="form-control" id="mcTrabajadorDistrito" value="Lima">
                         </div>
                         <div class="col-12">
                             <label for="mcTrabajadorDireccion" class="form-label">Dirección*</label>
-                            <input type="text" class="form-control" id="mcTrabajadorDireccion">
+                            <input type="text" class="form-control" id="mcTrabajadorDireccion" value="Av. Venezuela 1670">
                         </div>
                     </form>
                 </div>
@@ -174,7 +174,17 @@
             </mat-step>
             <!-- #enddocregion label -->
             <mat-step>
-                <p>You're welcome.</p>
+                <div class="contenedor-registro-exitoso container-fluid">
+                    <div class="icono-registro-exitoso">
+                        <span class="material-symbols-outlined">check_circle</span>
+                    </div>
+                    <div class="titulo-registro-exitoso">
+                        Registro exitoso
+                    </div>
+                    <div class="texto-registro-exitoso">
+                        La solicitud fue registrada. El administrador revisará la información brindada y dentro de las próximas XX horas le llegará un correo de respuesta
+                    </div>
+                </div>
             </mat-step>
 
             <!-- Icon overrides. -->

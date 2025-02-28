@@ -39,5 +39,4 @@ export class GestiondeusuariosComponent {
     }
     console.log(this.selectedDateRange);
   }
-
 }

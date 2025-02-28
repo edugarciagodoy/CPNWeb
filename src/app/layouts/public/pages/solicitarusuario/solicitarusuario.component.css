@@ -18,3 +18,24 @@
     background-color: #004AAD;
     color: #FFFFFF; 
 }
+
+.contenedor-registro-exitoso {
+    width: 30rem;
+    text-align: center;
+}
+
+.icono-registro-exitoso span {
+    font-size: 5rem;
+    color: #004AAD;
+}
+
+.titulo-registro-exitoso {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.texto-registro-exitoso {
+    font-size: 1rem;
+    color: #9F9F9F;
+    text-align: justify;
+}

@@ -73,3 +73,24 @@
         font-size: 1.5rem !important;
     }
 }
+
+@media (min-width: 600px) {
+    .navbar-brand img {
+        width: 10rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 800px) {
+    .navbar-brand img {
+        width: 12rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    .navbar-brand img {
+        width: 15rem;
+        height: auto;
+    }
+}
