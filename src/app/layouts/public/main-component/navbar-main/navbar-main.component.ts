@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../../../core/services/user.service';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-navbar-main',
@@ -18,4 +19,5 @@ export class NavbarMainComponent {
       console.log(user);
     });
   }
+  environmentUrl = environment.imageUrl;
 }

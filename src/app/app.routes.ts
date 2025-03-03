@@ -18,7 +18,7 @@ import { CuentarecuperadaComponent } from './layouts/public/pages/cuentarecupera
 import { Micuenta2Component } from './layouts/public/pages/micuenta2/micuenta2.component';
 
 export const routes: Routes = [
-    // { path: '**', redirectTo: 'home', pathMatch: 'full' }, // Redirección si la ruta no existe
+    { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirección si la ruta no existe
     { path: 'home', component: HomeComponent }, // Página principal
     { path: 'comobuscar', component: ComobuscarComponent },
     { path: 'comobuscar2', component: Comobuscar2Component }, //TEMPORAL
