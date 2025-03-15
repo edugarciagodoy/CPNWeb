@@ -1,16 +1,19 @@
 <div class="m-3">
     <div class="row container-fluid">
-        <div class="col-2 filtros-mantenimiento p-2 offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="col-2 filtros-mantenimiento p-2 offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1"
+            id="staticBackdrop" aria-labelledby="staticBackdropLabel">
             <div class="filtros-header">
                 <h4 class="filtros-title">Filtros</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="filtros-mantenimiento-principales">
                 <div id="filtros-label-principales">
-                    <div class="btn-parametro-busqueda" id="btn-parametro-codigo-postal" (click)="filtroSeleccion($event)">
+                    <div class="btn-parametro-busqueda" id="btn-parametro-codigo-postal"
+                        (click)="filtroSeleccion($event)">
                         <span>Código postal</span>
                     </div>
-                    <div class="btn-parametro-busqueda" id="btn-parametro-distrito-provincia-departamento" (click)="filtroSeleccion($event)">
+                    <div class="btn-parametro-busqueda" id="btn-parametro-distrito-provincia-departamento"
+                        (click)="filtroSeleccion($event)">
                         <span>Distrito / Provincia / Departamento</span>
                     </div>
                 </div>
@@ -48,12 +51,14 @@
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                            <button class="btn" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
                                 <span class="material-symbols-outlined">tune</span>
                             </button>
                         </div>
                         <div class="col container-btn-consultar">
-                            <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                            <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples"
+                                data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
                                 <span class="material-symbols-outlined">map_search</span>
                                 Consultas múltiples
                             </button>
@@ -66,15 +71,20 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8071490.353518892!2d-74.15946888169212!3d-8.957640346698458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1737997927035!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8071490.353518892!2d-74.15946888169212!3d-8.957640346698458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1737997927035!5m2!1ses!2spe"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="row mt-3">
                 <div class="container-btn-extra">
-                    <button type="button" class="btn btn-default btn-consultar-default btn-como-consultar" data-bs-toggle="modal" data-bs-target="#modal-como-buscar">
+                    <button type="button" class="btn btn-default btn-consultar-default btn-como-consultar"
+                        data-bs-toggle="modal" data-bs-target="#modal-como-buscar">
                         <span class="material-symbols-outlined">help</span>
                         ¿Cómo buscar?
                     </button>
-                    <button type="button" class="btn btn-default btn-consultar-default btn-comentario" data-bs-toggle="modal" data-bs-target="#modal-comentario">
+                    <button type="button" class="btn btn-default btn-consultar-default btn-comentario"
+                        data-bs-toggle="modal" data-bs-target="#modal-comentario">
                         <span class="material-symbols-outlined">forum</span>
                         Comentario
                     </button>
@@ -83,18 +93,22 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="modal-consultas-multiples" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-consultas-multiples-Label" aria-hidden="true">
+<div class="modal fade" id="modal-consultas-multiples" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modal-consultas-multiples-Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body container-fluid">
-                <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-consultas-multiples-Label">Consultas múltiples</h1>
+                <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-consultas-multiples-Label">Consultas
+                    múltiples</h1>
                 <hr class="mantenimiento-modal-separador">
                 <div class="consultas-multiples-btn">
-                    <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                    <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples"
+                        data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
                         <span class="material-symbols-outlined">home_pin</span>
                         Dirección
                     </button>
-                    <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                    <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples"
+                        data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
                         <span class="material-symbols-outlined">pin_drop</span>
                         Coordenadas
                     </button>
@@ -113,7 +127,8 @@
                                 <span class="peso-de-archivo texto-archivo descripcion-archivo">4.49 KB</span>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-default btn-consultas-multiples-descargar" data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                        <button type="button" class="btn btn-default btn-consultas-multiples-descargar"
+                            data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
                             <span class="material-symbols-outlined">cloud_download</span>
                             Descargar
                         </button>
@@ -124,7 +139,8 @@
                     <div class="container-cargar-archivo">
                         <span class="material-symbols-outlined icono-archivo">description</span>
                         <span class="nombre-de-archivo texto-archivo">Arrastre y suelte el archivo aquí o</span>
-                        <button type="button" class="btn btn-default btn-consultas-multiples-descargar">Escoger archivo</button>
+                        <button type="button" class="btn btn-default btn-consultas-multiples-descargar">Escoger
+                            archivo</button>
                         <input type="file" name="" id="" hidden>
                     </div>
                 </div>
@@ -132,36 +148,235 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="modal-como-buscar" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-como-buscar-Label" aria-hidden="true">
+<div class="modal fade" id="modal-como-buscar" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modal-como-buscar-Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="modal-body container-fluid">
+                <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-consultas-multiples-Label">¿Cómo
+                    realizar la búsqueda?</h1>
+                <hr class="mantenimiento-modal-separador">
+                <div class="mt-2 text-center">
+                    <span class="titulo-ayuda">Ayuda</span>
+                    <p class="parrafo-ayuda">
+                        En esta sección se describe los pasos para poder hacer de manera eficiente la busqueda del
+                        código postal y las opciones que tiene el sistema para mejorar la visualización de nuestra
+                        búsqueda y los datos referentes a esa dirección.<br>A la hora de realizar búsquedas de
+                        direcciones, dispondremos de las siguientes opciones :
+                    </p>
+                    <div class="ayuda-collapse">
+                        <div class="accordion" id="accordionAyuda">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordion-button-ayuda" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseBusquedaCodigoPostal"
+                                        aria-expanded="true" aria-controls="collapseBusquedaCodigoPostal">
+                                        BÚSQUEDA POR CÓDIGO POSTAL
+                                    </button>
+                                </h2>
+                                <div id="collapseBusquedaCodigoPostal" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionAyuda">
+                                    <div class="accordion-body">
+                                        <div class="filtros-mantenimiento-principales">
+                                            <div id="filtros-label-principales">
+                                                <div
+                                                    class="btn-parametro-busqueda-disabled btn-parametro-busqueda-seleccionado">
+                                                    <span>Código postal</span>
+                                                </div>
+                                            </div>
+                                            <div class="contenedor-txt-parametro-busqueda">
+                                                <input type="text" name="" id="txt-distrito-provincia-departamento"
+                                                    class="txt-parametro-busqueda" disabled>
+                                            </div>
+                                            <p class="parrafo-ayuda">
+                                                Nos ofrece lo siguiente:
+                                                <br>
+                                                Permite ingresar el número de código postal y al pulsar la tecla Enter,
+                                                nos permite observar en el mapa los límites de dicho código postal.
+                                                <br>
+                                                Al seleccionar la opción de distrito remarcara los distritos que
+                                                contienen ese código postal y demás información que se observa en el
+                                                mapa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordion-button-ayuda" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseBusquedaZona"
+                                        aria-expanded="false" aria-controls="collapseBusquedaZona">
+                                        BÚSQUEDA POR ZONA
+                                    </button>
+                                </h2>
+                                <div id="collapseBusquedaZona" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionAyuda">
+                                    <div class="accordion-body">
+                                        <div id="filtros-label-principales">
+                                            <div class="btn-parametro-busqueda-disabled btn-parametro-busqueda-seleccionado"
+                                                id="btn-parametro-distrito-provincia-departamento"
+                                                (click)="filtroSeleccion($event)">
+                                                <span>Distrito / Provincia / Departamento</span>
+                                            </div>
+                                        </div>
+                                        <div class="contenedor-txt-parametro-busqueda">
+                                            <input type="text" name="" id="txt-distrito-provincia-departamento"
+                                                class="txt-parametro-busqueda" disabled>
+                                        </div>
+                                        <div class="text-start">
+                                            <p class="parrafo-ayuda">
+                                                Nos ofrece lo siguiente:
+                                            </p>
+                                            <ul>
+                                                <li>Permite ingresar el nombre de un distrito seguido de su provincia y
+                                                    departamento.</li>
+                                                <li>Seleccionar el distrito del listado y automaticamente en el mapa se
+                                                    mostrara los limites del distrito.</li>
+                                                <li>Escribir el nombre aproximado de una calle, y tras pulsar sobre el
+                                                    botón de la lupa, el sistema tratará de localizarla. En caso de que
+                                                    la dirección no coincida exactamente, buscará la mejor aproximación.
+                                                </li>
+                                                <li>Tras localizar una calle, nos mostará los datos de ésta, así como su
+                                                    código postal.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordion-button-ayuda" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseBusquedaMapa"
+                                        aria-expanded="false" aria-controls="collapseBusquedaMapa">
+                                        BÚSQUEDA POR MAPA
+                                    </button>
+                                </h2>
+                                <div id="collapseBusquedaMapa" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionAyuda">
+                                    <div class="accordion-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordion-button-ayuda" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseResultadoBusqueda"
+                                        aria-expanded="false" aria-controls="collapseResultadoBusqueda">
+                                        RESULTADO DE BÚSQUEDA
+                                    </button>
+                                </h2>
+                                <div id="collapseResultadoBusqueda" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionAyuda">
+                                    <div class="accordion-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordion-button-ayuda" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseMapa" aria-expanded="false"
+                                        aria-controls="collapseMapa">
+                                        MAPA
+                                    </button>
+                                </h2>
+                                <div id="collapseMapa" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionAyuda">
+                                    <div class="accordion-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordion-button-ayuda" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseBotones"
+                                        aria-expanded="false" aria-controls="collapseBotones">
+                                        BOTONES
+                                    </button>
+                                </h2>
+                                <div id="collapseBotones" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionAyuda">
+                                    <div class="accordion-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed accordion-button-ayuda" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseManualUsuario"
+                                        aria-expanded="false" aria-controls="collapseManualUsuario">
+                                        MANUAL DE USUARIO
+                                    </button>
+                                </h2>
+                                <div id="collapseManualUsuario" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionAyuda">
+                                    <div class="accordion-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="modal-comentario" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal-comentario-Label" aria-hidden="true">
+<div class="modal fade" id="modal-comentario" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modal-comentario-Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="modal-body container-fluid">
+                <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-consultas-multiples-Label">Déjanos tu
+                    comentario</h1>
+                <hr class="mantenimiento-modal-separador">
+                <div class="mt-2">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Nombres y apellidos:*</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email:*</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <label for="exampleFormControlInput1" class="form-label">Consulta:*</label>
+                        <div class="mb-3 text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Resultado</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Uso de aplicativo</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">Dirección</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">Punto de interés</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">Centro poblado</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Distrito:*</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Comentario:*</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

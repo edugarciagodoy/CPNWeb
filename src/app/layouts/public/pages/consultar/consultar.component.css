@@ -1,0 +1,15 @@
+.titulo-ayuda {
+    text-align: center !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.parrafo-ayuda,
+ul li {
+    font-size: 0.7rem;
+}
+
+.accordion-button-ayuda {
+    font-size: 0.8rem !important;
+    padding: 0.7rem 1rem;
+}
