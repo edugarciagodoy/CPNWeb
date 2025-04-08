@@ -1,4 +1,4 @@
-<div class="m-3">
+<div class="container-principal-consultar m-3">
     <div class="row container-fluid">
         <div class="col-2 filtros-mantenimiento p-2 offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1"
             id="staticBackdrop" aria-labelledby="staticBackdropLabel">
@@ -47,29 +47,31 @@
             </div> -->
         </div>
         <div class="col">
-            <div class="row container-fluid">
-                <div class="col">
-                    <div class="row">
-                        <div class="col">
-                            <button class="btn" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-                                <span class="material-symbols-outlined">tune</span>
-                            </button>
-                        </div>
-                        <div class="col container-btn-consultar">
-                            <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples"
-                                data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
-                                <span class="material-symbols-outlined">map_search</span>
-                                Consultas múltiples
-                            </button>
-                            <button type="button" class="btn btn-default btn-consultar-default btn-exportar">
-                                <span class="material-symbols-outlined">download</span>
-                                Exportar
-                            </button>
-                        </div>
+            <div class="container-botones">
+                <div class="row container-fluid align-items-center d-flex flex-wrap gap-2">
+                    <!-- Ícono Tune -->
+                    <div class="col-auto">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                            <span class="material-symbols-outlined">tune</span>
+                        </button>
+                    </div>
+            
+                    <!-- Botones Consultar y Exportar -->
+                    <div class="col d-flex align-items-center container-btn-consultar flex-wrap">
+                        <button type="button" class="btn btn-default btn-consultar-default btn-consultas-multiples me-2"
+                            data-bs-toggle="modal" data-bs-target="#modal-consultas-multiples">
+                            <span class="material-symbols-outlined">map_search</span>
+                            Consultas múltiples
+                        </button>
+                        <button type="button" class="btn btn-default btn-consultar-default btn-exportar">
+                            <span class="material-symbols-outlined">download</span>
+                            Exportar
+                        </button>
                     </div>
                 </div>
             </div>
+            
             <div class="row mt-3">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8071490.353518892!2d-74.15946888169212!3d-8.957640346698458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1737997927035!5m2!1ses!2spe"

@@ -1,0 +1,38 @@
+
+
+@media (max-width: 992px) {
+    .container-principal-mantenimiento {
+        margin: 0.8rem 0.6rem !important;
+    }
+
+    .container-botones {
+        margin: 0 !important;
+    }
+
+    .container-botones div {
+        padding: 0 !important;
+    }
+
+    .btn-consultar-default {
+        font-size: 0.8rem;
+    }
+
+    .container-btn-consultar {
+        justify-content: center !important; /* Centrar los botones en móviles */
+        gap: 0.5rem; /* Espaciado entre el ícono y los botones */
+        flex-wrap: nowrap; /* Mantener los botones en línea */
+    }
+
+    .container-table-mantenimiento {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    thead th {
+        font-size: 1rem;
+    }
+
+    tbody tr td {
+        font-size: 0.8rem;
+    }
+}

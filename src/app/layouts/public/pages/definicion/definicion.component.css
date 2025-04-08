@@ -1,0 +1,49 @@
+@media (max-width: 992px) {
+    .principal-titles {
+        font-size: 1rem;
+    }
+    p,
+    li {
+        font-size: 0.8rem;
+    }
+    .container-principal {
+        margin: 0.8rem 0.6rem !important;
+    }
+    .container-qc-digito-cpn {
+        text-align: start;
+    }
+    .ngrafico {
+        font-size: 0.6rem;
+    }
+}
+/* 
+@media (min-width: 450px) {
+    .navbar-brand img {
+        width: 8rem;
+        height: auto;
+    }
+    .container-titulo h5 {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (min-width: 600px) {
+    .navbar-brand img {
+        width: 10rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 800px) {
+    .navbar-brand img {
+        width: 12rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    .navbar-brand img {
+        width: 15rem;
+        height: auto;
+    }
+} */

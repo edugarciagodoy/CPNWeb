@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-comobuscar2',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './comobuscar2.component.css'
 })
 export class Comobuscar2Component {
-
+  imageUrl = environment.imageUrl;
+  videoUrl = environment.videoUrl;
 }

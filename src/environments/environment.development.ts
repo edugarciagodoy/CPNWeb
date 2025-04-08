@@ -1,5 +1,6 @@
 export const environment = {
     production: false,
     API_URL: 'http://my-dev-url',
-    imageUrl: '/assets/ui/images/'
+    imageUrl: '/assets/ui/images/',
+    videoUrl: '/assets/ui/videos/'
   };

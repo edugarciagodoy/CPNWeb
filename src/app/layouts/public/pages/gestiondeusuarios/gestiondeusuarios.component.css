@@ -120,3 +120,48 @@ mat-card span{
 .modal-buttons .btn {
     padding: 0.3rem 0.7rem;
 }
+
+
+@media (max-width: 992px) {
+    .container-principal-gestion {
+        margin: 0.8rem 0.6rem !important;
+    }
+
+    .title-mantenimiento {
+        font-size: 1.3rem;        
+    }
+
+    .container-botones {
+        margin: 0 !important;
+    }
+
+    .container-botones div {
+        padding: 0 !important;
+    }
+
+    .btn-consultar-default {
+        font-size: 0.8rem;
+    }
+
+    .container-btn-consultar {
+        justify-content: center !important; /* Centrar los botones en móviles */
+        gap: 0.5rem; /* Espaciado entre el ícono y los botones */
+        flex-wrap: nowrap; /* Mantener los botones en línea */
+    }
+
+    thead th {
+        font-size: 1rem;
+    }
+
+    tbody tr td {
+        font-size: 0.8rem;
+    }
+
+    .solicitud-estado {
+        width: 110%;
+    }
+
+    .solicitud-estado span {
+        font-size: 0.8rem;
+    }
+}

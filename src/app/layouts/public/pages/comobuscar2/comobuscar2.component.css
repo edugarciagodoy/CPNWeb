@@ -1,8 +1,25 @@
+.accordion.accordion-flush {
+    padding: 0;
+}
+
+.correspondencia-title {
+    padding-left: 1rem;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
 .container-tarjeta-correspondencia {
     background-color: #455174;
     color: #FFFFFF;
     padding: 0.7rem;
     border-radius: 15px;
+}
+
+.correspondencia-separador {
+    background: #FFFFFF;
+    border: none;
+    height: 0.15rem !important;
+    margin: 0.5rem 0 1rem 0;
 }
 
 .tarjeta-correspondencia ul li {
@@ -28,4 +45,75 @@
 .accordion-item {
     margin: 0.5rem;
     border: 0;
+}
+
+.img-container {
+    position: relative;
+    width: fit-content;
+}
+
+.img-video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.video-yt {
+    position: absolute;
+    top: 13%; /* Ajusta para que coincida con la pantalla */
+    left: 16%;
+    width: 68%;
+    height: 52%;
+    background: black; /* Fondo de respaldo */
+    overflow: hidden;
+}
+
+.video-yt iframe,
+.video-yt video {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 992px) {
+    .principal-titles {
+        font-size: 1rem;
+    }
+    p,
+    p span,
+    li {
+        font-size: 0.8rem;
+    }
+    .container-principal {
+        margin: 0.8rem 0.6rem !important;
+    }
+    .container-qc-digito-cpn {
+        text-align: start;
+    }
+    .ngrafico {
+        font-size: 0.6rem;
+    }
+    .container-quees-img .img-container {
+        max-width: 45%; /* Ajusta el tamaño si es necesario */
+    }
+
+    .accordion-button {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    .accordion-body {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .correspondencia-title {
+        font-size: 1rem !important;
+    }
+    .tarjeta-correspondencia ul li {
+        font-size: 0.7rem;
+    }
+    .correspondencia-separador {
+        margin: 0.5rem 0 0.4rem 0 !important;
+    }
 }

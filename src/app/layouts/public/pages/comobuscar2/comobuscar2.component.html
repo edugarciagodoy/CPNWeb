@@ -1,7 +1,7 @@
 <div class="container-principal m-5">
     <div class="col container-fluid">
-        <div class="row">
-            <div class="col col-9">
+        <div class="row d-flex flex-column flex-lg-row">
+            <div class="col-lg-9">
                 <span class="principal-titles">¿Cómo buscar?</span>
                 <p>
                     A través de la página http://www.codigopostal.gob.pe// se puede consultar el Código
@@ -38,9 +38,23 @@
                 <p>Toma nota del Código Postal y agrégalo a la dirección completa para facilitar el envío y recepción de
                     correspondencia y paquetes.</p>
             </div>
-            <div class="col col-3 container-quees-img">
-                <img src="assets/ui/images/computer.png" alt="">
-                <img src="assets/ui/images/computer.png" alt="">
+            <div class="col-lg-3 container-quees-img d-flex justify-content-center align-items-center flex-wrap gap-2">
+                <div class="img-container">
+                    <img [src]="imageUrl + 'computer.png'" alt="" class="img-video img-fluid">
+                    <div class="video-yt">
+                        <video width="100%" height="100%" controls>
+                            <source [src]="videoUrl + 'video-test.mp4'" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img src="assets/ui/images/computer.png" alt="" class="img-video img-fluid">
+                    <div class="video-yt">
+                        <video width="100%" height="100%" controls>
+                            <source [src]="videoUrl + 'video-test.mp4'" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row mt-3">
@@ -82,8 +96,8 @@
                                     La forma correcta de escribir una dirección para enviar correspondencia o paquetería
                                     es la siguiente:
                                     <div class="container-sm container-tarjeta-correspondencia">
-                                        <h1 class="modal-title fs-5 mantenimiento-modal-title" id="modal-consultas-multiples-Label">Consultas múltiples</h1>
-                                        <hr class="mantenimiento-modal-separador">
+                                        <h1 class="modal-title fs-5 correspondencia-title">Título*</h1>
+                                        <hr class="correspondencia-modal-separador">
                                         <div class="mt-2 tarjeta-correspondencia">
                                             <ul>
                                                 <li>Nombre y Apellido / Nombre de empresa: Sra. Nathaly Mirabal</li>

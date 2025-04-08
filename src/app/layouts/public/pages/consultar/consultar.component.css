@@ -13,3 +13,46 @@ ul li {
     font-size: 0.8rem !important;
     padding: 0.7rem 1rem;
 }
+
+@media (max-width: 992px) {
+    .container-principal-consultar {
+        margin: 0.8rem 0.6rem !important;
+    }
+
+    .container-botones {
+        margin: 0 !important;
+    }
+
+    .container-botones div {
+        padding: 0 !important;
+    }
+
+    .btn-consultar-default,
+    .btn-consultar-default span {
+        font-size: 0.8rem;
+    }
+
+    .container-btn-consultar {
+        justify-content: center !important; /* Centrar los botones en móviles */
+        gap: 0.5rem; /* Espaciado entre el ícono y los botones */
+        flex-wrap: nowrap; /* Mantener los botones en línea */
+    }
+
+    .btn-consultas-multiples, .btn-exportar {
+        width: auto; /* Mantener ancho automático para que no se apilen */
+    }
+}
+
+@media (max-width: 600px) {
+    .btn-consultar-default,
+    .btn-consultar-default span {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn-consultar-default,
+    .btn-consultar-default span {
+        font-size: 0.5rem;
+    }
+}

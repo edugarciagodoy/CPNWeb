@@ -1,0 +1,128 @@
+.container-title-login-cpn {
+    align-content: center;
+    text-align: end;
+}
+
+.title-login-cpn {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #BF0909;
+    margin-left: 14rem;
+}
+
+form {
+    padding: 4rem 7rem;
+}
+
+@media (max-width: 1660px) {
+    .title-login-cpn {
+        font-size: 5rem;
+        margin-left: 10rem;
+    }
+
+    form {
+        padding: 4rem 6.5rem;
+    }
+}
+
+@media (max-width: 1500px) {
+    .title-login-cpn {
+        font-size: 4.8rem;
+        margin-left: 5rem;
+    }
+
+    form {
+        padding: 4rem 6rem;
+    }
+}
+
+@media (max-width: 1310px) {
+    .title-login-cpn {
+        font-size: 4.5rem;
+        margin-left: 1.5rem;
+    }
+
+    form {
+        padding: 4rem 4.5rem;
+    }
+}
+
+@media (max-width: 1150px) {
+    .title-login-cpn {
+        font-size: 4rem;
+    }
+
+    form {
+        padding: 4rem 3.5rem;
+    }
+}
+
+@media (max-width: 970px) {
+    .container-principal {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-title-login-cpn {
+        display: none;
+    }
+
+    form {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 930px) {
+    form {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 860px) {
+    form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 830px) {
+    form {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 790px) {
+    form {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .container-login {
+        width: 75%;
+        padding: 0;
+    }
+
+    form {
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .a-solicitarusuario,
+    .a-recuperarclave {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .a-solicitarusuario,
+    .a-recuperarclave {
+        font-size: 0.5rem;
+    }
+}
